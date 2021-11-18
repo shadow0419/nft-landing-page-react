@@ -23,24 +23,39 @@ const Money = () => {
       <Text fontSize="22px" align="center">
         BY PLAYING ON OUR SERVER
       </Text>
-      <Col margin="10px 0 0 0" mgap="0 0 15px 0">
-        <Row>
+      <Col margin="20px 0 0 0" mgap="0 0 15px 0">
+        <Row align="flex-start" justify="flex-start">
           <img src={Vector} alt="frame" />
-          <Text fontSize="20px" align="center" margin="0 0 0 20px">
+          <Text
+            fontSize="20px"
+            align="center"
+            margin="0 0 0 20px"
+            maxWidth="600px"
+          >
             We will be holding raffles every week, with some prizes including
             MMP Tokens, houses, rank upgrades, and more.
           </Text>
         </Row>
-        <Row>
+        <Row align="flex-start" justify="flex-start">
           <img src={Vector} alt="frame" />
-          <Text fontSize="20px" align="center" margin="0 0 0 20px">
+          <Text
+            fontSize="20px"
+            align="center"
+            margin="0 0 0 20px"
+            maxWidth="600px"
+          >
             We will be holding raffles every week, with some prizes including
             MMP Tokens, houses, rank upgrades, and more.
           </Text>
         </Row>
-        <Row>
+        <Row align="flex-start" justify="flex-start">
           <img src={Vector} alt="frame" />
-          <Text fontSize="20px" align="center" margin="0 0 0 20px">
+          <Text
+            fontSize="20px"
+            align="center"
+            margin="0 0 0 20px"
+            maxWidth="600px"
+          >
             We will be holding raffles every week, with some prizes including
             MMP Tokens, houses, rank upgrades, and more.
           </Text>

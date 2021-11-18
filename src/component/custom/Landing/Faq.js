@@ -7,6 +7,29 @@ import gtavImg from "../../../assets/gtav_img.png";
 import link from "../../../assets/link.png";
 import juli from "../../../assets/juli.png";
 import { Collapse } from "../../../component/common/Collapse";
+const data = [
+  {
+    title: "How can I participate in closed beta?",
+    content:
+      "You need to be a holder with at least 100,000,000 MMP Tokens to participate in our closed beta testing!",
+  },
+  {
+    title: "How can I participate in open beta? ",
+    content:
+      "You need to be a holder with at least 100,000,000 MMP Tokens to participate in our closed beta testing!",
+  },
+
+  {
+    title: "How can I collect & Trade NFTs?",
+    content:
+      "You need to be a holder with at least 100,000,000 MMP Tokens to participate in our closed beta testing!",
+  },
+  {
+    title: "How can I earn MMP Tokens?",
+    content:
+      "You need to be a holder with at least 100,000,000 MMP Tokens to participate in our closed beta testing!",
+  },
+];
 const Faq = () => {
   return (
     <Col id="faq">
@@ -33,10 +56,15 @@ const Faq = () => {
           // background="rgba(255, 255, 255, 0.3)"
           mgap="0 0 30px 0"
         >
-          <Collapse />
-          <Collapse />
-          <Collapse />
-          <Collapse />
+          {data.map((item, key) => {
+            return (
+              <Collapse
+                title={item.title}
+                content={item.content}
+                key={key + 1}
+              />
+            );
+          })}
         </Col>
       </Col>
       <Col
