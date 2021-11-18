@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Col = styled.div`
   display: flex;
   flex-direction: column;
-  width: ${(props) => props.width || "auto"};
+  width: ${(props) => props.width || "100%"};
   max-width: ${(props) => props.maxWidth || "auto"};
   min-width: ${(props) => props.minWidth || "auto"};
   height: ${(props) => props.height || "auto"};
@@ -23,15 +23,22 @@ export const Col = styled.div`
   border-bottom-color: ${(props) => props.borderBottomColor || "0"};
   border-style: ${(props) => props.borderStyle || "0"};
   border-width: ${(props) => props.borderWidth || "0"};
+  background-image: ${(props) => props.backgroundImage || ""};
+  background: ${(props) => props.background || "none"};
   background-color: ${(props) => props.backgroundColor || "transparent"};
   border-radius: ${(props) => props.borderRadius || 0};
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   overflow: ${(props) => props.overflow || "unset"};
+  opacity: ${(props) => props.opacity || 1};
+  backdrop-filter: ${(props) => props.backdropFilter || "none"};
+  & > *:not(:last-child) {
+    margin: ${(props) => props.mgap};
+  }
 `;
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
-  width: ${(props) => props.width || "auto"};
+  width: ${(props) => props.width || "100%"};
   max-width: ${(props) => props.maxWidth || "auto"};
   min-width: ${(props) => props.minWidth || "auto"};
   height: ${(props) => props.height || "auto"};
@@ -51,8 +58,14 @@ export const Row = styled.div`
   border-bottom-color: ${(props) => props.borderBottomColor || "0"};
   border-style: ${(props) => props.borderStyle || "0"};
   border-width: ${(props) => props.borderWidth || "0"};
+  background: ${(props) => props.background || "none"};
   background-color: ${(props) => props.backgroundColor || "transparent"};
   border-radius: ${(props) => props.borderRadius || 0};
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   overflow: ${(props) => props.overflow || "unset"};
+  opacity: ${(props) => props.opacity || 1};
+  backdrop-filter: ${(props) => props.backdropFilter || "none"};
+  & > *:not(:last-child) {
+    margin: ${(props) => props.mgap};
+  }
 `;

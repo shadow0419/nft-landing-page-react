@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "../../theme";
+import { theme } from "../../../theme";
 const StyledButton = styled.button`
   color: ${theme.primaryBtn} !important;
   background-color: #e3e6c7 !important;

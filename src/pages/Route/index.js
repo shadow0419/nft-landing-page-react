@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // @import component
-import Loading from "../../component/Loading";
+import Loading from "../../component/common/Loading";
 // @import pages
 const Landing = React.lazy(() => import("../Landing"));
 

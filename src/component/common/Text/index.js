@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import { theme } from "../../../theme";
 export const Text = styled.span`
   width: ${(props) => props.width || "auto"};
   margin: ${(props) => props.margin || "0"};
   padding: ${(props) => props.padding || "0"};
   font-size: ${(props) => props.fontSize || "1rem"};
-  font-family: ${(props) => props.fontFamily || ""};
+  font-family: ${(props) => props.fontFamily || "Gilroy-Medium"};
   font-weight: ${(props) => props.fontWeight || "350"};
-  line-height: ${(props) => props.lineHeight || "1.5rem"};
-  color: ${(props) => props.color || "white"};
+  line-height: ${(props) => props.lineHeight || "auto"};
+  color: ${(props) => props.color || theme.white};
   max-width: ${(props) => props.maxWidth || "auto"};
   text-align: ${(props) => props.align || "left"};
   white-space: ${(props) => props.whiteSpace || "none"};
@@ -15,4 +16,5 @@ export const Text = styled.span`
   overflow: ${(props) => props.overflow || "none"};
   background: ${(props) => props.background || "none"};
   cursor: ${(props) => props.cursor || "unset"};
+  z-index: ${(props) => props.zIndex || 0};
 `;

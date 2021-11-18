@@ -11,4 +11,5 @@ export const theme = {
   primarySidebar: "#333",
   primaryMirror: "rgba(0, 0, 0, 0.25)",
   mobile: "576px",
+  white: "#FFFFFF",
 };
