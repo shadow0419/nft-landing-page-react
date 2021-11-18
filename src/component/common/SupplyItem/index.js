@@ -5,14 +5,26 @@ import { Col } from "../Layout";
 
 export const SupplyItem = (props) => {
   return (
-    <Col align="center">
-      <Col></Col>
-      <Text fontSize="30px" lineHeight="62.04px">
+    <Col
+      align="center"
+      maxWidth="15%"
+      borderRadius="45px"
+      backgroundColor="#1E1459"
+      padding="10px 10px 10px 10px"
+    >
+      <Col backgroundColor="#ffffff" borderRadius="38px">
+        <img
+          src={props.img}
+          alt="supply"
+          style={{ borderRadius: "38px" }}
+          width="100%"
+          height="100%"
+        />
+      </Col>
+      <Text fontSize="20px" lineHeight="62.04px">
         Clothe
       </Text>
-      <Text fontSize="20px" lineHeight="41.36px">
-        Clothe
-      </Text>
+      <Text fontSize="14px">Clothe</Text>
     </Col>
   );
 };
