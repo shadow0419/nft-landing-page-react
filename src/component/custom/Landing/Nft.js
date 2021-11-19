@@ -10,7 +10,7 @@ const Nft = () => {
         src={NFT}
         alt="NFT"
         style={{ position: "absolute", right: "0" }}
-        height="600px"
+        height="500px"
       />
       <Col>
         <img
@@ -21,7 +21,7 @@ const Nft = () => {
             left: "0",
             backgroundColor: "#1E1459",
           }}
-          height="640px"
+          height="520px"
         />
       </Col>
       <Text
@@ -34,7 +34,7 @@ const Nft = () => {
       </Text>
       <Col>
         <Text
-          fontSize="30px"
+          fontSize="23px"
           margin="20px 0 0 51px"
           align="left"
           maxWidth="1021px"

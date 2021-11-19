@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import getWeb3 from "../../../getWeb3";
 import { Text } from "../../common/Text";
 import logo from "../../../assets/MetaMultiplayerLogo.png";
 import line from "../../../assets/line.png";
@@ -148,6 +149,15 @@ const Navbardata = [
 ];
 const Top = () => {
   const [selected, setSelected] = useState("home");
+  const [userAccount, setUserAccount] = useState();
+  useEffect(() => {
+    ConnectWallet();
+  }, []);
+  const ConnectWallet = async () => {
+    const web3 = await getWeb3();
+    const accounts = await web3.eth.getAccounts();
+    setUserAccount(accounts[0]);
+  };
   return (
     <Col id="home" padding="0 50px">
       <NavbarBack>
@@ -171,18 +181,20 @@ const Top = () => {
                 />
               );
             })}
-            {/* {active ? (
-              <Button>
-                {`${account.slice(0, 6)}...
-                ${account.slice(account.length - 4, account.length)}`}
-              </Button>
-            ) : ( */}
+
             <Button
-            // onClick={() => {
-            //   connect();
-            // }}
+              onClick={() => {
+                ConnectWallet();
+              }}
             >
-              <Text>Connect wallet</Text>
+              <Text>
+                {userAccount
+                  ? `${userAccount.slice(0, 6)}...${userAccount.slice(
+                      userAccount.length - 4,
+                      userAccount.length
+                    )}`
+                  : "Conecct wallet"}
+              </Text>
             </Button>
             {/* )} */}
           </LinkLayout>

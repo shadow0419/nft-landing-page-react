@@ -102,16 +102,28 @@ const EcoDirect = styled.div`
   width: 35px;
   height: 35px;
 `;
+const SupplyGrid = styled.div`
+  display: grid;
+  grid-template: repeat(1, 1fr) / repeat(5, 1fr);
+  gap: 30px;
+  margin: 50px 0 0 0;
+  @media only screen and (max-width: 1000px) {
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  }
+  @media only screen and (max-width: 500px) {
+    grid-template: repeat(5, 1fr) / repeat(1, 1fr);
+  }
+`;
 const Supply = () => {
   return (
     <Col align="center" id="supply">
-      <Row mgap="0 30px 0 0" margin="50px 0 0 0" align="flex-start">
+      <SupplyGrid>
         <SupplyItem img={jagvar} />
         <SupplyItem img={clothe} />
         <SupplyItem img={house} />
         <SupplyItem img={bogati} />
         <SupplyItem img={bmw} />
-      </Row>
+      </SupplyGrid>
       <BuyButton>
         <Text fontSize="24px" align="center">
           Buy

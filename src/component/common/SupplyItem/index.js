@@ -7,7 +7,7 @@ export const SupplyItem = (props) => {
   return (
     <Col
       align="center"
-      maxWidth="15%"
+      // maxWidth="15%"
       borderRadius="45px"
       backgroundColor="#1E1459"
       padding="10px 10px 10px 10px"

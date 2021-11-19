@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 // @import component
 import { Text } from "../../common/Text";
@@ -8,6 +8,7 @@ import metamaskImg from "../../../assets/metamask.png";
 import bnbImg from "../../../assets/binance-coin-logo.png";
 import MetaMultiplayerLogo from "../../../assets/MetaMultiplayerLogo.png";
 import buyeffect from "../../../assets/buyeffect.png";
+import getWeb3 from "../../../getWeb3";
 import { Row, Col } from "../../common/Layout";
 const BuyInput = styled.div`
   max-width: 450px;
@@ -56,6 +57,15 @@ const BuyButton = styled.button`
   border: none;
 `;
 const Presale = () => {
+  const [userAccount, setUserAccount] = useState();
+  useEffect(() => {
+    ConnectWallet();
+  }, []);
+  const ConnectWallet = async () => {
+    const web3 = await getWeb3();
+    const accounts = await web3.eth.getAccounts();
+    setUserAccount(accounts[0]);
+  };
   return (
     <Col
       id="presale"
@@ -80,7 +90,11 @@ const Presale = () => {
         Make sure to use Metamask/Trust Wallet to interact with this form. Min
         Contribution: 0.1 BNB Max Contribution : 5 BNB
       </Text>
-      <ConnectButton>
+      <ConnectButton
+        onClick={() => {
+          ConnectWallet();
+        }}
+      >
         <Row
           width="55px"
           height="55px"
@@ -90,7 +104,12 @@ const Presale = () => {
           <img src={metamaskImg} alt="metamask" />
         </Row>
         <Text fontSize="20px" align="center" margin="0 0 0 10px">
-          Conecct to meta mask
+          {userAccount
+            ? `${userAccount.slice(0, 6)}...${userAccount.slice(
+                userAccount.length - 4,
+                userAccount.length
+              )}`
+            : "Conecct to meta mask"}
         </Text>
       </ConnectButton>
       <Col

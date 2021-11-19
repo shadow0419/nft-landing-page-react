@@ -5,7 +5,6 @@ import mmp from "../../../assets/mmp.png";
 import receipt from "../../../assets/receipt.png";
 import buyback from "../../../assets/buyback.png";
 import cardPos from "../../../assets/card-pos.png";
-import split from "../../../assets/split.png";
 import token from "../../../assets/token.png";
 import car1 from "../../../assets/car1.png";
 import car2 from "../../../assets/car2.png";
@@ -14,7 +13,6 @@ import { Text } from "../../common/Text";
 
 const TokenomicsDiv = styled.div`
   position: relative;
-
   background-color: rgb(28, 20, 43);
   background-image: url(${token});
   backdrop-filter: blur(10px);
@@ -50,7 +48,7 @@ const StyledToken = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50px;
-  width: 80%;
+  width: 90%;
 `;
 const TokenItems = styled.div`
   display: grid;
@@ -74,7 +72,7 @@ const TokenItem = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 0 0 10%;
+  padding: 0 15% 0 20%;
 `;
 
 const TokenItemImg = styled.img``;
@@ -104,7 +102,6 @@ const Tokenomics = () => {
                   <Text>5% </Text>
                 </Col>
               </TokenItem>
-
               <TokenItem>
                 <TokenItemImg src={receipt} />
                 <Col>
@@ -112,7 +109,6 @@ const Tokenomics = () => {
                   <Text>2%</Text>
                 </Col>
               </TokenItem>
-
               <TokenItem>
                 <TokenItemImg src={buyback} />
                 <Col>
@@ -120,7 +116,6 @@ const Tokenomics = () => {
                   <Text>3%</Text>
                 </Col>
               </TokenItem>
-
               <TokenItem>
                 <TokenItemImg src={cardPos} />
                 <Col>
@@ -131,7 +126,6 @@ const Tokenomics = () => {
             </TokenItems>
           </StyledToken>
         </Col>
-
         <RoadmapText>Roadmap</RoadmapText>
       </TokenomicsDiv>
     </Col>

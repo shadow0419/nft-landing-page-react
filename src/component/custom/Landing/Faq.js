@@ -34,13 +34,12 @@ const data = [
 ];
 const StyledFooter = styled.div`
   background: ${`url(${gtavImg})`};
-  margin: 220px 0 0 0;
-  position: "relative";
+  margin: 200px 0 0 0;
   width: 100%;
 `;
 const FooterContainer = styled.div`
   backdrop-filter: blur(10px);
-  padding: 20px;
+  padding: 50px;
   align-items: flex-end;
   justify-content: space-between;
   display: flex;
@@ -72,7 +71,6 @@ const Faq = () => {
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
           borderRadius="45px"
-          // background="rgba(255, 255, 255, 0.3)"
           mgap="0 0 30px 0"
         >
           {data.map((item, key) => {
@@ -99,7 +97,7 @@ const Faq = () => {
           <Col width="auto">
             <Text>Link</Text>
             <img src={link} alt="link" width="200px" />
-            <Row mgap="0 30px 0 0" margin="30px 0 0 0" align="flex-start">
+            <Row mgap="0 40px 0 0" margin="30px 0 0 0" align="flex-start">
               <Col mgap="0 0 30px 0" width="auto">
                 <Text>F&Q</Text>
                 <Text>PreSale</Text>
