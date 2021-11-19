@@ -10,7 +10,7 @@ import grand from "../../../assets/grand.png";
 import styled from "styled-components";
 import { Col, Row } from "../../common/Layout";
 import { FaBars } from "react-icons/fa";
-import { Button } from "../../../component/common/Button";
+import { Button } from "../../common/Button";
 const LogoIMG = styled.img`
   margin-right: 0.7rem !important;
   border-style: none;
@@ -117,6 +117,7 @@ const LinkItem = styled.a`
     }
   }
 `;
+const HomeButton = styled.button``;
 const RenderItem = ({ selected, name, onSelected }) => {
   console.log(selected, name);
   return (
@@ -159,7 +160,11 @@ const Top = () => {
     setUserAccount(accounts[0]);
   };
   return (
-    <Col id="home" padding="0 50px">
+    <Col
+      id="home"
+      padding="0 50px"
+      style={{ position: "relative", backgroundColor: "rgb(29, 10, 51)" }}
+    >
       <NavbarBack>
         {/* <Sidebar /> */}
         <NavbarView>
@@ -200,24 +205,30 @@ const Top = () => {
           </LinkLayout>
         </NavbarView>
       </NavbarBack>
-
+      <img
+        src={line}
+        style={{ position: "absolute", left: -50, width: 1000 }}
+      />
+      <img
+        src={gtaCha}
+        style={{ position: "absolute", width: 500, right: 50, bottom: 50 }}
+      />
       <Text
         fontFamily="Orbitron"
         fontWeight="700"
         fontSize="40px"
-        align="center"
         margin="200px 0 0 0"
+        width="50%"
       >
         Metamultiplayer - First Real Metaverse Experience!
       </Text>
-
-      <Text margin="80px 0 0 0">
+      <Text margin="40px 0 0 0" width="35%">
         Play on our GTA 5 roleplay server, Collect & Trade NFT'S, earn MMP
         tokens while playing on our server. Join today!
       </Text>
       <Row>
-        <Button>whitepaper</Button>
-        <Button>Introduction</Button>
+        <HomeButton>whitepaper</HomeButton>
+        <HomeButton>Introduction</HomeButton>
       </Row>
       <Row mgap="0 20px 0 0" margin="100px 0 50px 0">
         <Row backgroundColor="white" padding="5px" borderRadius="20px">

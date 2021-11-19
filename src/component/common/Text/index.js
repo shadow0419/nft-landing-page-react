@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../../theme";
 export const Text = styled.span`
+  flex: ${(props) => props.flex || "auto"};
   width: ${(props) => props.width || "auto"};
   margin: ${(props) => props.margin || "0"};
   padding: ${(props) => props.padding || "0"};

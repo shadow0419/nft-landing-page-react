@@ -157,7 +157,7 @@ const Supply = () => {
           return (
             <Row key={key + 1}>
               <EcoDirect gfcolor={item.gfcolor} glcolor={item.glcolor} />
-              <Text fontSize="20px" margin="0 0 0 15px">
+              <Text fontSize="20px" margin="0 0 0 15px" flex="1">
                 {item.describe}
               </Text>
             </Row>
