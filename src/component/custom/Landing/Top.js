@@ -7,7 +7,7 @@ import rlight from "../../../assets/rlight.png";
 import weichle from "../../../assets/weichle.png";
 import grand from "../../../assets/grand.png";
 import styled from "styled-components";
-import { Col } from "../../common/Layout";
+import { Col, Row } from "../../common/Layout";
 import { FaBars } from "react-icons/fa";
 import { Button } from "../../../component/common/Button";
 const LogoIMG = styled.img`
@@ -48,12 +48,12 @@ const NavbarView = styled.div`
     max-width: 540px;
   }
 `;
-export const RowLayout = styled.div`
+const RowLayout = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
 `;
-export const BarView = styled.div`
+const BarView = styled.div`
   @media only screen and (max-width: 768px) {
     display: block;
     position: fixed;
@@ -64,7 +64,7 @@ export const BarView = styled.div`
     cursor: pointer;
   }
 `;
-export const LinkLayout = styled.div`
+const LinkLayout = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -75,7 +75,7 @@ export const LinkLayout = styled.div`
     display: none;
   }
 `;
-export const LinkItem = styled.a`
+const LinkItem = styled.a`
   position: relative;
   cursor: pointer;
   text-decoration: none;
@@ -149,7 +149,7 @@ const Navbardata = [
 const Top = () => {
   const [selected, setSelected] = useState("home");
   return (
-    <Col id="home">
+    <Col id="home" padding="0 50px">
       <NavbarBack>
         {/* <Sidebar /> */}
         <NavbarView>
@@ -188,6 +188,36 @@ const Top = () => {
           </LinkLayout>
         </NavbarView>
       </NavbarBack>
+
+      <Text
+        fontFamily="Orbitron"
+        fontWeight="700"
+        fontSize="40px"
+        align="center"
+        margin="200px 0 0 0"
+      >
+        Metamultiplayer - First Real Metaverse Experience!
+      </Text>
+
+      <Text margin="80px 0 0 0">
+        Play on our GTA 5 roleplay server, Collect & Trade NFT'S, earn MMP
+        tokens while playing on our server. Join today!
+      </Text>
+      <Row>
+        <Button>whitepaper</Button>
+        <Button>Introduction</Button>
+      </Row>
+      <Row mgap="0 20px 0 0" margin="100px 0 50px 0">
+        <Row backgroundColor="white" padding="5px" borderRadius="20px">
+          <img src={weichle} alt="weichle" width="50px" />
+        </Row>
+        <Row backgroundColor="white" padding="5px" borderRadius="20px">
+          <img src={grand} alt="grand" width="50px" />
+        </Row>
+        <Row backgroundColor="rgba(255, 255, 255, 0.3)" borderRadius="20px">
+          <img src={rlight} alt="rlight" width="50px" />
+        </Row>
+      </Row>
     </Col>
   );
 };

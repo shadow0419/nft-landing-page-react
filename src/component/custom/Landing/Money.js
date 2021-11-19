@@ -17,10 +17,21 @@ const Money = () => {
       height="100%"
       align="center"
     >
-      <Text fontFamily="Orbitron" fontWeight="700" fontSize="40px">
+      <Text
+        fontFamily="Orbitron"
+        fontWeight="700"
+        fontSize="40px"
+        margin="30px 0 0 0"
+      >
         MAKE MONEY
       </Text>
-      <Text fontSize="22px" align="center">
+      <Text
+        fontSize="22px"
+        align="center"
+        margin="20px 0 0 0"
+        fontFamily="
+Gilroy-Light"
+      >
         BY PLAYING ON OUR SERVER
       </Text>
       <Col margin="20px 0 0 0" mgap="0 0 15px 0">
@@ -37,7 +48,7 @@ const Money = () => {
           </Text>
         </Row>
         <Row align="flex-start" justify="flex-start">
-          <img src={Vector} alt="frame" />
+          <img src={Frame} alt="frame" />
           <Text
             fontSize="20px"
             align="center"
@@ -49,7 +60,7 @@ const Money = () => {
           </Text>
         </Row>
         <Row align="flex-start" justify="flex-start">
-          <img src={Vector} alt="frame" />
+          <img src={passove} alt="frame" />
           <Text
             fontSize="20px"
             align="center"

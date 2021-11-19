@@ -41,7 +41,7 @@ export const Col = styled.div`
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
-  width: ${(props) => props.width || "100%"};
+  width: ${(props) => props.width || "auto"};
   max-width: ${(props) => props.maxWidth || "auto"};
   min-width: ${(props) => props.minWidth || "auto"};
   height: ${(props) => props.height || "auto"};

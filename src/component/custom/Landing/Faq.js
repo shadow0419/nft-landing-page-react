@@ -7,6 +7,8 @@ import gtavImg from "../../../assets/gtav_img.png";
 import link from "../../../assets/link.png";
 import juli from "../../../assets/juli.png";
 import { Collapse } from "../../../component/common/Collapse";
+import { FaTwitter, FaYoutube, FaTelegramPlane } from "react-icons/fa";
+import styled from "styled-components";
 const data = [
   {
     title: "How can I participate in closed beta?",
@@ -30,9 +32,27 @@ const data = [
       "You need to be a holder with at least 100,000,000 MMP Tokens to participate in our closed beta testing!",
   },
 ];
+const StyledFooter = styled.div`
+  background: ${`url(${gtavImg})`};
+  margin: 220px 0 0 0;
+  position: "relative";
+  width: 100%;
+`;
+const FooterContainer = styled.div`
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  align-items: flex-end;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
 const Faq = () => {
   return (
-    <Col id="faq">
+    <Col id="faq" backgroundColor="rgb(30, 23, 50)">
       <Col align="center">
         <Text
           fontFamily="Orbitron"
@@ -43,11 +63,10 @@ const Faq = () => {
         >
           FAQ
         </Text>
-
         <Col
           background={`url(${faqImg})`}
           height="100%"
-          width="100%"
+          width="90%"
           margin="40px 0 0 0"
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
@@ -67,13 +86,63 @@ const Faq = () => {
           })}
         </Col>
       </Col>
-      <Col
-        background={`url(${gtavImg})`}
-        margin="220px 0 0 0"
-        position="relative"
-      >
-        <img src={juli} style={{ position: "absoulte", top: "-10px" }} />
-      </Col>
+      <StyledFooter>
+        <FooterContainer>
+          <Row position="absolute" top="-10px" width="100%">
+            <img
+              src={juli}
+              style={{
+                maxWidth: "300px",
+              }}
+            />
+          </Row>
+          <Col width="auto">
+            <Text>Link</Text>
+            <img src={link} alt="link" width="200px" />
+            <Row mgap="0 30px 0 0" margin="30px 0 0 0" align="flex-start">
+              <Col mgap="0 0 30px 0" width="auto">
+                <Text>F&Q</Text>
+                <Text>PreSale</Text>
+                <Text>Supply</Text>
+              </Col>
+              <Col mgap="0 0 30px 0" width="auto">
+                <Text>Make Money</Text>
+                <Text>Nft</Text>
+                <Text>Roadmap</Text>
+              </Col>
+              <Col mgap="0 0 30px 0" width="auto">
+                <Text>Tokenomics</Text>
+              </Col>
+            </Row>
+          </Col>
+          <Col width="auto" align="center">
+            <img src={logoImg} width="120px" />
+            <Row mgap="0 15px 0 0">
+              <Row
+                backgroundColor="rgba(255, 255, 255, 0.3)"
+                borderRadius="15px"
+                padding="10px"
+              >
+                <FaTwitter size="25" color="white" />
+              </Row>
+              <Row
+                backgroundColor="rgba(255, 255, 255, 0.3)"
+                borderRadius="15px"
+                padding="10px"
+              >
+                <FaTelegramPlane size="25" color="white" />
+              </Row>
+              <Row
+                backgroundColor="rgba(255, 255, 255, 0.3)"
+                borderRadius="15px"
+                padding="10px"
+              >
+                <FaYoutube size="25" color="white" />
+              </Row>
+            </Row>
+          </Col>
+        </FooterContainer>
+      </StyledFooter>
     </Col>
   );
 };

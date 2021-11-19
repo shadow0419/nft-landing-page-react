@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "../../../theme";
 const StyledButton = styled.button`
   background-color: #e3e6c7 !important;
   background: linear-gradient(90.76deg, #ff9d2a 3.46%, #ffd707 102.26%);

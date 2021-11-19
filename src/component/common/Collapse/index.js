@@ -7,10 +7,10 @@ import arrow from "../../../assets/arrow.png";
 
 const StyledCollapse = styled.div`
   background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(4px);
   border-radius: 45px;
   padding: 20px 35px;
-  width: 100%;
+  width: calc(100% - 70px);
 `;
 const Arrow = styled.img`
   width: 10px;

@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { Text } from "../../common/Text";
 import soliderGun from "../../../assets/solider-gun.png";
 import NFT from "../../../assets/NFT.png";
