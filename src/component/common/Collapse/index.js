@@ -10,7 +10,7 @@ const StyledCollapse = styled.div`
   backdrop-filter: blur(4px);
   border-radius: 45px;
   padding: 20px 35px;
-  width: calc(100% - 70px);
+  width: 100%;
 `;
 const Arrow = styled.img`
   width: 10px;

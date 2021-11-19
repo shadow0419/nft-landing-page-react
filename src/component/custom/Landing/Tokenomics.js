@@ -95,7 +95,7 @@ const Tokenomics = () => {
             <TokenItemImg src={mmp} />
             <TokenItemText>
               MMP Rewards
-              <tr />
+              <br />
               5%
             </TokenItemText>
           </TokenItem>
@@ -104,7 +104,7 @@ const Tokenomics = () => {
             <TokenItemImg src={receipt} />
             <TokenItemText>
               Liquidity Tax
-              <tr />
+              <br />
               2%
             </TokenItemText>
           </TokenItem>
@@ -113,7 +113,7 @@ const Tokenomics = () => {
             <TokenItemImg src={buyback} />
             <TokenItemText>
               BuybackTax
-              <tr />
+              <br />
               3%
             </TokenItemText>
           </TokenItem>
@@ -122,7 +122,7 @@ const Tokenomics = () => {
             <TokenItemImg src={cardPos} />
             <TokenItemText>
               Sell Tax
-              <tr />
+              <br />
               0%
             </TokenItemText>
           </TokenItem>

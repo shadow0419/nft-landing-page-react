@@ -29,12 +29,11 @@ const Money = () => {
         fontSize="22px"
         align="center"
         margin="20px 0 0 0"
-        fontFamily="
-Gilroy-Light"
+        fontFamily="Gilroy-Light"
       >
         BY PLAYING ON OUR SERVER
       </Text>
-      <Col margin="20px 0 0 0" mgap="0 0 15px 0">
+      <Col margin="20px 0 30px 0" mgap="0 0 15px 0">
         <Row align="flex-start" justify="flex-start">
           <img src={Vector} alt="frame" />
           <Text

@@ -5,8 +5,8 @@ import { Text } from "../Text";
 
 export const ItemView = styled.div`
   position: relative;
-  width: 354px;
-  min-height: 210px;
+  width: 600px;
+  height: 210px;
 `;
 const StyledItem = styled.div`
   position: absolute;
@@ -18,34 +18,32 @@ const StyledItem = styled.div`
   backdrop-filter: blur(70px);
   border-radius: 60px;
   height: 180px;
-  width: 400px;
+  width: 600px;
   margin-top: 40px;
 `;
 const Datetap = styled.div`
   background: #16beaa;
   position: absolute;
   border-radius: 25px;
-  width: 90px;
+  width: 150px;
   height: 60px;
   z-index: 0;
-  right: 5%;
-  padding: 7px 50px 0 50px;
+  right: 40px;
+  padding: 10px 0 0 0;
   text-align: center;
 `;
 export const MapItem = (props) => {
   return (
     <ItemView direction={props.direction}>
       <Datetap>
-        <Text fontSize="20px" lineHeight="34.5pxpx">
-          {props.date}
-        </Text>
+        <Text fontSize="20px">{props.date}</Text>
       </Datetap>
       <StyledItem>
-        <Text fontSize="25px" lineHeight="50.18px">
+        <Text fontSize="23px" lineHeight="50.18px">
           {props.title}
         </Text>
         <Text
-          fontSize="20px"
+          fontSize="18px"
           lineHeight="34.5pxpx"
           margin="15px 0 0 0"
           width="100%"

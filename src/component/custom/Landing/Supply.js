@@ -83,6 +83,15 @@ const BuyButton = styled.button`
 const TokenSupply = styled.div`
   display: flex;
   margin: 40px 0 0 0;
+  width: 100%;
+  padding: 0 0 0 20px;
+  & > * {
+    margin-right: -30px;
+  }
+  & > :first-child {
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+  }
 `;
 const EcoDirect = styled.div`
   background: ${(props) =>
@@ -119,15 +128,18 @@ const Supply = () => {
       </Text>
       <TokenSupply>
         {colordata.map((item, key) => {
-          return <CountItem item={item} key={key + 1} />;
+          return <CountItem item={item} key={key + 1} index={key + 1} />;
         })}
       </TokenSupply>
       <Row
         wrap="wrap"
         mgap="0 20px 20px 0"
         justify="flex-start"
-        margin="30px 0 0 0"
+        margin="30px 30px 0 30px"
         borderRadius="45px"
+        backgroundColor="rgba(255,255,255,0.3)"
+        backdropFilter="blur(10px)"
+        padding="20px"
       >
         {colordata.map((item, key) => {
           return (
@@ -140,7 +152,7 @@ const Supply = () => {
           );
         })}
       </Row>
-      <Text fontWeight="700" fontSize="20px" align="center" margin="30px 0 0 0">
+      <Text fontSize="24px" align="center" margin="30px 0 110px 0">
         Total supply: 1,000,000,000,000
       </Text>
     </Col>
