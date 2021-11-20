@@ -58,7 +58,7 @@ const Faq = () => {
           fontWeight="700"
           fontSize="40px"
           align="center"
-          margin="40px 0 0 0"
+          margin="50px 0 0 0"
         >
           FAQ
         </Text>

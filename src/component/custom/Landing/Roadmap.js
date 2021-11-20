@@ -11,7 +11,7 @@ const RoadmapDiv = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   background-image: url(${roadmap1}), url(${roadmap2}), url(${wave});
   background-position: top, bottom, left;
   background-repeat: no-repeat, no-repeat, no-repeat;
@@ -22,10 +22,11 @@ const RoadmapDiv1 = styled.div`
     margin-bottom: 200px;
   }
   & > *:last-child {
-    margin-bottom: 150px;
+    margin-bottom: 100px;
   }
   display: flex;
   flex-direction: column;
+  margin: 2%;
 `;
 
 const RoadmapDiv2 = styled.div`
@@ -34,6 +35,7 @@ const RoadmapDiv2 = styled.div`
   }
   display: flex;
   flex-direction: column;
+  margin: 2%;
 `;
 
 const Roadmap = () => {
@@ -62,7 +64,7 @@ const Roadmap = () => {
             content="Stake any amount of MMP tokens on our staking platform, INSANE APY's incoming!"
           />
         </RoadmapDiv1>
-        <img src={bar} alt="bar" />
+        <img src={bar} alt="bar" width="80px" />
         <RoadmapDiv2>
           <MapItem
             date="2021 Q4"

@@ -7,6 +7,10 @@ export const ItemView = styled.div`
   position: relative;
   width: 600px;
   height: 210px;
+  margin: 0;
+  @media only screen and (max-width: 1400px) {
+    width: 590px;
+  }
 `;
 const StyledItem = styled.div`
   position: absolute;

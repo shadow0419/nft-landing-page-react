@@ -7,10 +7,10 @@ import gtaCha from "../../../assets/gta-cha.png";
 import rlight from "../../../assets/rlight.png";
 import weichle from "../../../assets/weichle.png";
 import grand from "../../../assets/grand.png";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Col, Row } from "../../common/Layout";
 import { FaBars } from "react-icons/fa";
-import { Button } from "../../common/Button";
+import { Button } from "../../../component/common/Button";
 const LogoIMG = styled.img`
   margin-right: 0.7rem !important;
   border-style: none;
@@ -25,7 +25,6 @@ const NavbarBack = styled.div`
     rgba(0, 0, 0, 0) 100%
   );
   top: 0;
-  z-index: 10000000;
   width: 100%;
   padding: 0 2rem 1rem 1rem;
 `;
@@ -117,7 +116,34 @@ const LinkItem = styled.a`
     }
   }
 `;
-const HomeButton = styled.button``;
+const IntroButton = styled.button`
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 4px 97px rgba(255, 86, 246, 0.51);
+  backdrop-filter: blur(192px);
+  padding: 10px 30px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 13px;
+`;
+const WhiteButton = styled.button`
+  padding: 10px 30px;
+  background: linear-gradient(
+    92.23deg,
+    #ff56f6 21.43%,
+    #b936ee 50.63%,
+    #3bace2 100%,
+    #406aff 117.04%
+  );
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 97px rgba(255, 86, 246, 0.51);
+  backdrop-filter: blur(192px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 13px;
+`;
 const RenderItem = ({ selected, name, onSelected }) => {
   console.log(selected, name);
   return (
@@ -148,6 +174,27 @@ const Navbardata = [
   "Make money",
   "FAQ",
 ];
+const transitionTime = 700;
+const phraseAnim = keyframes`
+0%{
+    opacity:0;
+    transform:translateX(999px)
+}
+100%{
+    opacity:1;
+    transform:translateX(0)
+}
+`;
+
+export const HeaderText = styled.span`
+  font-family: Orbitron;
+  font-weight: 700;
+  font-size: 40px;
+  /* text-align: center; */
+  color: white;
+  margin: 100px 0 0 0;
+  animation: ${phraseAnim} ${transitionTime}ms linear 300ms forwards;
+`;
 const Top = () => {
   const [selected, setSelected] = useState("home");
   const [userAccount, setUserAccount] = useState();
@@ -173,7 +220,7 @@ const Top = () => {
             <Text fontFamily={`"Aladin", sans-serif`}>Meta Multiplayer</Text>
           </RowLayout>
           <BarView>
-            <FaBars size="30" />
+            <FaBars size="30" color="white" />
           </BarView>
           <LinkLayout>
             {Navbardata.map((item, key) => {
@@ -207,38 +254,63 @@ const Top = () => {
       </NavbarBack>
       <img
         src={line}
-        style={{ position: "absolute", left: -50, width: 1000 }}
+        width="60%"
+        style={{ position: "absolute", left: "-5%" }}
+        alt="line"
       />
       <img
         src={gtaCha}
-        style={{ position: "absolute", width: 500, right: 50, bottom: 50 }}
+        width="600px"
+        style={{ position: "absolute", right: "5%", bottom: 50 }}
+        alt="gtaCha"
       />
+      <HeaderText HeaderText>
+        Metamultiplayer - First <tr />
+        Real Metaverse Experience!
+      </HeaderText>
       <Text
-        fontFamily="Orbitron"
-        fontWeight="700"
-        fontSize="40px"
-        margin="200px 0 0 0"
-        width="50%"
+        margin="40px 0 50px 0"
+        width="35%"
+        lineHeight="39px"
+        color="rgba(255, 255, 255, 0.6)"
       >
-        Metamultiplayer - First Real Metaverse Experience!
+        Play on our GTA 5 roleplay server, Collect & Trade NFT'S, <tr /> earn
+        MMP tokens while playing on our server. Join today!
       </Text>
-      <Text margin="40px 0 0 0" width="35%">
-        Play on our GTA 5 roleplay server, Collect & Trade NFT'S, earn MMP
-        tokens while playing on our server. Join today!
-      </Text>
-      <Row>
-        <HomeButton>whitepaper</HomeButton>
-        <HomeButton>Introduction</HomeButton>
+      <Row mgap="0 20px 0 0">
+        <WhiteButton>
+          <Text>whitepaper</Text>
+        </WhiteButton>
+        <IntroButton>
+          <Text>Introduction</Text>
+        </IntroButton>
       </Row>
       <Row mgap="0 20px 0 0" margin="100px 0 50px 0">
-        <Row backgroundColor="white" padding="5px" borderRadius="20px">
+        <Row
+          backgroundColor="white"
+          padding="5px"
+          borderRadius="20px"
+          width="60px"
+          height="60px"
+        >
           <img src={weichle} alt="weichle" width="50px" />
         </Row>
-        <Row backgroundColor="white" padding="5px" borderRadius="20px">
+        <Row
+          backgroundColor="rgba(255, 255, 255, 0.3)"
+          padding="5px"
+          borderRadius="20px"
+          width="60px"
+          height="60px"
+        >
           <img src={grand} alt="grand" width="50px" />
         </Row>
-        <Row backgroundColor="rgba(255, 255, 255, 0.3)" borderRadius="20px">
-          <img src={rlight} alt="rlight" width="50px" />
+        <Row
+          backgroundColor="yellow"
+          borderRadius="20px"
+          width="60px"
+          height="60px"
+        >
+          <img src={rlight} alt="rlight" width="100%" />
         </Row>
       </Row>
     </Col>

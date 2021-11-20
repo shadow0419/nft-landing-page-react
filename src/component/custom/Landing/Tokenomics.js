@@ -62,8 +62,11 @@ const TokenItems = styled.div`
   }
   @media only screen and (max-width: 900px) {
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    & > *:not(:first-child) {
+      border: none;
+    }
   }
-  @media only screen and (max-width: 550px) {
+  @media only screen and (max-width: 450px) {
     grid-template: repeat(4, 1fr) / repeat(1, 1fr);
   }
 `;
@@ -77,21 +80,37 @@ const TokenItem = styled.div`
 
 const TokenItemImg = styled.img``;
 
+const WhiteCar = styled.img`
+  position: absolute;
+  top: -110px;
+  right: 10%;
+  z-index: -1;
+  width: 600px;
+  @media only screen and (max-width: 750px) {
+    right: -30px;
+    top: 10px;
+    width: 400px;
+  }
+`;
+const BlackCar = styled.img`
+  position: absolute;
+  bottom: 120px;
+  left: 5%;
+  z-index: -1;
+  width: 450px;
+  @media only screen and (max-width: 750px) {
+    left: 0;
+    bottom: 190px;
+    width: 300px;
+  }
+`;
 const Tokenomics = () => {
   return (
     <Col id="tokenomics">
       <TokenomicsDiv>
         <TokenomicsText>Tokenomics</TokenomicsText>
-        <img
-          src={car1}
-          style={{ position: "absolute", top: -110, right: 200, zIndex: -1 }}
-          width="600px"
-        />
-        <img
-          src={car2}
-          style={{ position: "absolute", bottom: 120, left: 150, zIndex: -1 }}
-          width="450px"
-        />
+        <WhiteCar src={car1} />
+        <BlackCar src={car2} />
         <Col align="center">
           <StyledToken>
             <TokenItems>

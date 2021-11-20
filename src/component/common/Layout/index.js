@@ -37,6 +37,9 @@ export const Col = styled.div`
   & > *:not(:last-child) {
     margin: ${(props) => props.mgap};
   }
+  & > * {
+    z-index: 3;
+  }
 `;
 export const Row = styled.div`
   display: flex;
