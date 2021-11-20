@@ -194,6 +194,14 @@ export const HeaderText = styled.span`
   color: white;
   margin: 100px 0 0 0;
   animation: ${phraseAnim} ${transitionTime}ms linear 300ms forwards;
+  @media only screen and (max-width: 750px) {
+    font-size: 25px;
+    line-height: 50px;
+  }
+  @media only screen and (max-width: 500px) {
+    font-size: 23px;
+    line-height: 50px;
+  }
 `;
 const Top = () => {
   const [selected, setSelected] = useState("home");
@@ -265,12 +273,11 @@ const Top = () => {
         alt="gtaCha"
       />
       <HeaderText HeaderText>
-        Metamultiplayer - First <tr />
+        Metamultiplayer - First <br />
         Real Metaverse Experience!
       </HeaderText>
       <Text
         margin="40px 0 50px 0"
-        width="35%"
         lineHeight="39px"
         color="rgba(255, 255, 255, 0.6)"
       >

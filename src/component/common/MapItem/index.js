@@ -5,15 +5,12 @@ import { Text } from "../Text";
 
 export const ItemView = styled.div`
   position: relative;
-  width: 600px;
+  width: auto;
   height: 210px;
   margin: 0;
-  @media only screen and (max-width: 1400px) {
-    width: 590px;
-  }
 `;
 const StyledItem = styled.div`
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   z-index: 10;
@@ -21,8 +18,8 @@ const StyledItem = styled.div`
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(70px);
   border-radius: 60px;
-  height: 180px;
-  width: 600px;
+
+  width: 100%;
   margin-top: 40px;
 `;
 const Datetap = styled.div`
@@ -32,7 +29,7 @@ const Datetap = styled.div`
   width: 150px;
   height: 60px;
   z-index: 0;
-  right: 40px;
+  right: 10%;
   padding: 10px 0 0 0;
   text-align: center;
 `;
