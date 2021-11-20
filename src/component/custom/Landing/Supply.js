@@ -14,6 +14,7 @@ import motoreffect from "../../../assets/motor-effect.png";
 import maneffect1 from "../../../assets/man-effect1.png";
 import maneffect2 from "../../../assets/man-effect2.png";
 import styled from "styled-components";
+
 import { CountItem } from "../../common/CountItem";
 const colordata = [
   {
@@ -97,9 +98,10 @@ const BuyButton = styled.button`
 const TokenSupply = styled.div`
   display: flex;
   position: relative;
-  margin: 40px 0 0 0;
+  margin: 40px 0 0 20px;
+  /* padding-top: 40px; */
   width: 100%;
-  padding: 0 0 0 20px;
+  padding-bottom: 20px;
   & > * {
     margin-right: -30px;
   }
@@ -108,6 +110,7 @@ const TokenSupply = styled.div`
     border-top-left-radius: 35px;
   }
   overflow-x: auto;
+  overflow-y: visible;
 `;
 const EcoDirect = styled.div`
   background: ${(props) =>
@@ -153,15 +156,7 @@ const Supply = () => {
           Buy
         </Text>
       </BuyButton>
-      <Text
-        fontFamily="Orbitron"
-        fontWeight="700"
-        fontSize="40px"
-        align="center"
-        margin="30px 0 0 0"
-      >
-        SUPPLY
-      </Text>
+
       <img
         src={motor}
         width="600px"
@@ -191,11 +186,24 @@ const Supply = () => {
         width="20%"
         style={{ position: "absolute", right: 0, bottom: "15%", zIndex: 1 }}
       />
-      <TokenSupply>
-        {colordata.map((item, key) => {
-          return <CountItem item={item} key={key + 1} index={key + 1} />;
-        })}
-      </TokenSupply>
+      <div style={{ width: "100%", display: "flex", flexDirection: "column" }}>
+        <Text
+          fontFamily="Orbitron"
+          fontWeight="700"
+          fontSize="40px"
+          align="center"
+          margin="30px 0 0 0"
+        >
+          SUPPLY
+        </Text>
+        <TokenSupply>
+          {colordata.map((item, key) => {
+            return (
+              <CountItem item={item} key={key + 1} index={key + 1}></CountItem>
+            );
+          })}
+        </TokenSupply>
+      </div>
       <Row
         wrap="wrap"
         mgap="0 20px 20px 0"
