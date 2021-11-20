@@ -87,7 +87,6 @@ const Money = () => {
                 margin="0 0 0 20px"
                 maxWidth="600px"
                 lineHeight="200%"
-                align="left"
               >
                 We will be holding raffles every week, with some prizes
                 including MMP Tokens, houses, rank upgrades, and more.
@@ -105,7 +104,6 @@ const Money = () => {
                 margin="0 0 0 20px"
                 maxWidth="600px"
                 lineHeight="200%"
-                align="left"
               >
                 Work and earn - as simple as it sounds! you can work as a Taxi
                 driver, police officer, military service e.t.c
@@ -123,7 +121,6 @@ const Money = () => {
                 margin="0 0 0 20px"
                 maxWidth="600px"
                 lineHeight="200%"
-                align="left"
               >
                 Passive income - Own a business or business land and generate a
                 new passive income source!

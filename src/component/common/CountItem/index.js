@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Text } from "../Text";
-import { Col } from "../Layout";
 import ReactTooltip from "react-tooltip";
 const StyledRec = styled.div`
   background: ${(props) =>

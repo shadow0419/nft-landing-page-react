@@ -103,6 +103,7 @@ const Faq = () => {
                 style={{
                   maxWidth: "300px",
                 }}
+                alt="juli"
               />
             </Row>
             <Col width="auto">
@@ -125,7 +126,7 @@ const Faq = () => {
               </Row>
             </Col>
             <Col width="auto" align="center">
-              <img src={logoImg} width="120px" />
+              <img src={logoImg} width="120px" alt="logo" />
               <Row mgap="0 15px 0 0">
                 <Row
                   backgroundColor="rgba(255, 255, 255, 0.3)"

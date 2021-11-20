@@ -162,11 +162,13 @@ const Supply = () => {
         src={motor}
         width="600px"
         style={{ position: "absolute", left: 0, bottom: 0, zIndex: 2 }}
+        alt="motor"
       />
       <img
         src={WCCFgtaV2}
         width="700px"
         style={{ position: "absolute", right: "5%", bottom: "20%", zIndex: 2 }}
+        alt="WCCFgtaV2"
       />
       <img
         src={motoreffect}
@@ -176,16 +178,19 @@ const Supply = () => {
           bottom: "25%",
           zIndex: 1,
         }}
+        alt="motoreffect"
       />
       <img
         src={maneffect1}
         width="40%"
         style={{ position: "absolute", right: 0, bottom: "30%", zIndex: 1 }}
+        alt="maneffect1"
       />
       <img
         src={maneffect2}
         width="20%"
         style={{ position: "absolute", right: 0, bottom: "15%", zIndex: 1 }}
+        alt="maneffect2"
       />
       <div style={{ width: "100%", display: "flex", flexDirection: "column" }}>
         <Text
