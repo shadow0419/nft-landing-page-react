@@ -192,7 +192,7 @@ export const HeaderText = styled.span`
   font-size: 40px;
   /* text-align: center; */
   color: white;
-  margin: 100px 0 0 0;
+  margin: 0 0 0 0;
   animation: ${phraseAnim} ${transitionTime}ms linear 300ms forwards;
   @media only screen and (max-width: 750px) {
     font-size: 25px;
@@ -201,6 +201,12 @@ export const HeaderText = styled.span`
   @media only screen and (max-width: 500px) {
     font-size: 23px;
     line-height: 50px;
+  }
+`;
+const GtaImg = styled.img`
+  width: 600px;
+  @media only screen and (max-width: 1100px) {
+    display: none;
   }
 `;
 const Top = () => {
@@ -260,66 +266,80 @@ const Top = () => {
           </LinkLayout>
         </NavbarView>
       </NavbarBack>
-      <img
-        src={line}
-        width="60%"
-        style={{ position: "absolute", left: "-5%" }}
-        alt="line"
-      />
-      <img
-        src={gtaCha}
-        width="600px"
-        style={{ position: "absolute", right: "5%", bottom: 50 }}
-        alt="gtaCha"
-      />
-      <HeaderText HeaderText>
-        Metamultiplayer - First <br />
-        Real Metaverse Experience!
-      </HeaderText>
-      <Text
-        margin="40px 0 50px 0"
-        lineHeight="39px"
-        color="rgba(255, 255, 255, 0.6)"
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          maxWidth: "1200px",
+          margin: "auto",
+          marginTop: "100px",
+        }}
       >
-        Play on our GTA 5 roleplay server, Collect & Trade NFT'S, <tr /> earn
-        MMP tokens while playing on our server. Join today!
-      </Text>
-      <Row mgap="0 20px 0 0">
-        <WhiteButton>
-          <Text>whitepaper</Text>
-        </WhiteButton>
-        <IntroButton>
-          <Text>Introduction</Text>
-        </IntroButton>
-      </Row>
-      <Row mgap="0 20px 0 0" margin="100px 0 50px 0">
-        <Row
-          backgroundColor="white"
-          padding="5px"
-          borderRadius="20px"
-          width="60px"
-          height="60px"
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+          }}
         >
-          <img src={weichle} alt="weichle" width="50px" />
-        </Row>
-        <Row
-          backgroundColor="rgba(255, 255, 255, 0.3)"
-          padding="5px"
-          borderRadius="20px"
-          width="60px"
-          height="60px"
-        >
-          <img src={grand} alt="grand" width="50px" />
-        </Row>
-        <Row
-          backgroundColor="yellow"
-          borderRadius="20px"
-          width="60px"
-          height="60px"
-        >
-          <img src={rlight} alt="rlight" width="100%" />
-        </Row>
-      </Row>
+          <img
+            src={line}
+            width="60%"
+            style={{ position: "absolute", left: "-5%" }}
+            alt="line"
+          />
+
+          <HeaderText HeaderText>
+            Metamultiplayer - First <br />
+            Real Metaverse Experience!
+          </HeaderText>
+          <Text
+            margin="40px 0 50px 0"
+            lineHeight="39px"
+            color="rgba(255, 255, 255, 0.6)"
+          >
+            Play on our GTA 5 roleplay server, Collect & Trade NFT'S, <tr />{" "}
+            earn MMP tokens while playing on our server. Join today!
+          </Text>
+          <Row mgap="0 20px 0 0">
+            <WhiteButton>
+              <Text>whitepaper</Text>
+            </WhiteButton>
+            <IntroButton>
+              <Text>Introduction</Text>
+            </IntroButton>
+          </Row>
+          <Row mgap="0 20px 0 0" margin="100px 0 50px 0">
+            <Row
+              backgroundColor="white"
+              padding="5px"
+              borderRadius="20px"
+              width="60px"
+              height="60px"
+            >
+              <img src={weichle} alt="weichle" width="50px" />
+            </Row>
+            <Row
+              backgroundColor="rgba(255, 255, 255, 0.3)"
+              padding="5px"
+              borderRadius="20px"
+              width="60px"
+              height="60px"
+            >
+              <img src={grand} alt="grand" width="50px" />
+            </Row>
+            <Row
+              backgroundColor="yellow"
+              borderRadius="20px"
+              width="60px"
+              height="60px"
+            >
+              <img src={rlight} alt="rlight" width="100%" />
+            </Row>
+          </Row>
+        </div>
+        <GtaImg src={gtaCha} />
+      </div>
     </Col>
   );
 };
