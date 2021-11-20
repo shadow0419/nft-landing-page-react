@@ -39,8 +39,17 @@ const StyledFooter = styled.div`
 `;
 const FooterContainer = styled.div`
   backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+`;
+const FooterBody = styled.div`
+  max-width: 1200px;
+  width: 100%;
   padding: 50px;
   align-items: flex-end;
+  position: relative;
   justify-content: space-between;
   display: flex;
   flex-direction: row;
@@ -71,6 +80,7 @@ const Faq = () => {
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
           borderRadius="45px"
+          maxWidth="1200px"
           mgap="0 0 30px 0"
         >
           {data.map((item, key) => {
@@ -86,59 +96,61 @@ const Faq = () => {
       </Col>
       <StyledFooter>
         <FooterContainer>
-          <Row position="absolute" top="-10px" width="100%">
-            <img
-              src={juli}
-              style={{
-                maxWidth: "300px",
-              }}
-            />
-          </Row>
-          <Col width="auto">
-            <Text>Link</Text>
-            <img src={link} alt="link" width="200px" />
-            <Row mgap="0 40px 0 0" margin="30px 0 0 0" align="flex-start">
-              <Col mgap="0 0 30px 0" width="auto">
-                <Text>F&Q</Text>
-                <Text>PreSale</Text>
-                <Text>Supply</Text>
-              </Col>
-              <Col mgap="0 0 30px 0" width="auto">
-                <Text>Make Money</Text>
-                <Text>Nft</Text>
-                <Text>Roadmap</Text>
-              </Col>
-              <Col mgap="0 0 30px 0" width="auto">
-                <Text>Tokenomics</Text>
-              </Col>
+          <FooterBody>
+            <Row position="absolute" top="-10px" width="100%">
+              <img
+                src={juli}
+                style={{
+                  maxWidth: "300px",
+                }}
+              />
             </Row>
-          </Col>
-          <Col width="auto" align="center">
-            <img src={logoImg} width="120px" />
-            <Row mgap="0 15px 0 0">
-              <Row
-                backgroundColor="rgba(255, 255, 255, 0.3)"
-                borderRadius="15px"
-                padding="10px"
-              >
-                <FaTwitter size="25" color="white" />
+            <Col width="auto">
+              <Text>Link</Text>
+              <img src={link} alt="link" width="200px" />
+              <Row mgap="0 40px 0 0" margin="30px 0 0 0" align="flex-start">
+                <Col mgap="0 0 30px 0" width="auto">
+                  <Text>F&Q</Text>
+                  <Text>PreSale</Text>
+                  <Text>Supply</Text>
+                </Col>
+                <Col mgap="0 0 30px 0" width="auto">
+                  <Text>Make Money</Text>
+                  <Text>Nft</Text>
+                  <Text>Roadmap</Text>
+                </Col>
+                <Col mgap="0 0 30px 0" width="auto">
+                  <Text>Tokenomics</Text>
+                </Col>
               </Row>
-              <Row
-                backgroundColor="rgba(255, 255, 255, 0.3)"
-                borderRadius="15px"
-                padding="10px"
-              >
-                <FaTelegramPlane size="25" color="white" />
+            </Col>
+            <Col width="auto" align="center">
+              <img src={logoImg} width="120px" />
+              <Row mgap="0 15px 0 0">
+                <Row
+                  backgroundColor="rgba(255, 255, 255, 0.3)"
+                  borderRadius="15px"
+                  padding="10px"
+                >
+                  <FaTwitter size="25" color="white" />
+                </Row>
+                <Row
+                  backgroundColor="rgba(255, 255, 255, 0.3)"
+                  borderRadius="15px"
+                  padding="10px"
+                >
+                  <FaTelegramPlane size="25" color="white" />
+                </Row>
+                <Row
+                  backgroundColor="rgba(255, 255, 255, 0.3)"
+                  borderRadius="15px"
+                  padding="10px"
+                >
+                  <FaYoutube size="25" color="white" />
+                </Row>
               </Row>
-              <Row
-                backgroundColor="rgba(255, 255, 255, 0.3)"
-                borderRadius="15px"
-                padding="10px"
-              >
-                <FaYoutube size="25" color="white" />
-              </Row>
-            </Row>
-          </Col>
+            </Col>
+          </FooterBody>
         </FooterContainer>
       </StyledFooter>
     </Col>

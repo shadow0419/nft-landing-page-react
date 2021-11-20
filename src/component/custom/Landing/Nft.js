@@ -86,30 +86,42 @@ const Description = styled.span`
 const Nft = () => {
   return (
     <Col id="nft" position="relative" backgroundColor="#1E1459" align="center">
-      <NftView>
-        <SoldierImg />
-        <NFTImg />
-      </NftView>
-      <Text
-        fontFamily="Orbitron"
-        fontWeight="700"
-        fontSize="40px"
-        margin="61px 0 0 0"
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          maxWidth: "1200px",
+          margin: "auto",
+          marginTop: "100px",
+          position: "relative",
+        }}
       >
-        NFT
-      </Text>
-      <Col margin="auto auto 100px auto">
-        <Description>
-          A new way to own, trade, and battle for unique digital items that have
-          value in the real world. Collectible items in games have long been a
-          driving force in their popularity, fostering engagement in the game.
-          Desperate to buy a new house in Los Santos? Yearning to get a
-          Despacito jet, an Angry Bird car or a legendary Apocalypto? No
-          problem! Do you want to buy expensive houses, cars, weapons and
-          clothes - collect and trade them as NFTs? This means you are in the
-          right place! It’s not just roleplay, it’s also real economy
-        </Description>
-      </Col>
+        <NftView>
+          <SoldierImg />
+          <NFTImg />
+        </NftView>
+        <Text
+          fontFamily="Orbitron"
+          fontWeight="700"
+          fontSize="40px"
+          margin="61px 0 0 0"
+        >
+          NFT
+        </Text>
+        <Col margin="auto auto 100px auto">
+          <Description>
+            A new way to own, trade, and battle for unique digital items that
+            have value in the real world. Collectible items in games have long
+            been a driving force in their popularity, fostering engagement in
+            the game. Desperate to buy a new house in Los Santos? Yearning to
+            get a Despacito jet, an Angry Bird car or a legendary Apocalypto? No
+            problem! Do you want to buy expensive houses, cars, weapons and
+            clothes - collect and trade them as NFTs? This means you are in the
+            right place! It’s not just roleplay, it’s also real economy
+          </Description>
+        </Col>
+      </div>
     </Col>
   );
 };

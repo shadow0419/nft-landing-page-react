@@ -101,6 +101,7 @@ const TokenSupply = styled.div`
   margin: 40px 0 0 20px;
   /* padding-top: 40px; */
   width: 100%;
+  max-width: 1200px;
   padding-bottom: 20px;
   & > * {
     margin-right: -30px;
@@ -196,13 +197,23 @@ const Supply = () => {
         >
           SUPPLY
         </Text>
-        <TokenSupply>
-          {colordata.map((item, key) => {
-            return (
-              <CountItem item={item} key={key + 1} index={key + 1}></CountItem>
-            );
-          })}
-        </TokenSupply>
+        <div
+          style={{ width: "100%", display: "flex", justifyContent: "center" }}
+        >
+          <TokenSupply>
+            {colordata.map((item, key) => {
+              return (
+                <CountItem
+                  data-tip
+                  data-for={`countItem${key + 1}`}
+                  item={item}
+                  key={key + 1}
+                  index={key + 1}
+                />
+              );
+            })}
+          </TokenSupply>
+        </div>
       </div>
       <Row
         wrap="wrap"
@@ -213,6 +224,7 @@ const Supply = () => {
         backgroundColor="rgba(255,255,255,0.3)"
         backdropFilter="blur(10px)"
         padding="20px"
+        maxWidth="1200px"
       >
         {colordata.map((item, key) => {
           return (

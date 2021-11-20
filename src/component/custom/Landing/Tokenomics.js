@@ -19,6 +19,8 @@ const TokenomicsDiv = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+
+  margin: auto;
   z-index: 0;
 `;
 
@@ -83,7 +85,7 @@ const TokenItemImg = styled.img``;
 const WhiteCar = styled.img`
   position: absolute;
   top: -110px;
-  right: 10%;
+  right: 0;
   z-index: -1;
   width: 600px;
   @media only screen and (max-width: 750px) {
@@ -108,44 +110,55 @@ const Tokenomics = () => {
   return (
     <Col id="tokenomics">
       <TokenomicsDiv>
-        <TokenomicsText>Tokenomics</TokenomicsText>
-        <WhiteCar src={car1} />
-        <BlackCar src={car2} />
-        <Col align="center">
-          <StyledToken>
-            <TokenItems>
-              <TokenItem>
-                <TokenItemImg src={mmp} />
-                <Col>
-                  <Text>MMP Rewards</Text>
-                  <Text>5% </Text>
-                </Col>
-              </TokenItem>
-              <TokenItem>
-                <TokenItemImg src={receipt} />
-                <Col>
-                  <Text>Liquidity Tax</Text>
-                  <Text>2%</Text>
-                </Col>
-              </TokenItem>
-              <TokenItem>
-                <TokenItemImg src={buyback} />
-                <Col>
-                  <Text>BuybackTax</Text>
-                  <Text>3%</Text>
-                </Col>
-              </TokenItem>
-              <TokenItem>
-                <TokenItemImg src={cardPos} />
-                <Col>
-                  <Text>Sell Tax</Text>
-                  <Text>0%</Text>
-                </Col>
-              </TokenItem>
-            </TokenItems>
-          </StyledToken>
-        </Col>
-        <RoadmapText>Roadmap</RoadmapText>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            maxWidth: "1200px",
+            margin: "auto",
+            marginTop: "100px",
+            position: "relative",
+          }}
+        >
+          <TokenomicsText>Tokenomics</TokenomicsText>
+          <WhiteCar src={car1} />
+          <BlackCar src={car2} />
+          <Col align="center">
+            <StyledToken>
+              <TokenItems>
+                <TokenItem>
+                  <TokenItemImg src={mmp} />
+                  <Col>
+                    <Text>MMP Rewards</Text>
+                    <Text>5% </Text>
+                  </Col>
+                </TokenItem>
+                <TokenItem>
+                  <TokenItemImg src={receipt} />
+                  <Col>
+                    <Text>Liquidity Tax</Text>
+                    <Text>2%</Text>
+                  </Col>
+                </TokenItem>
+                <TokenItem>
+                  <TokenItemImg src={buyback} />
+                  <Col>
+                    <Text>BuybackTax</Text>
+                    <Text>3%</Text>
+                  </Col>
+                </TokenItem>
+                <TokenItem>
+                  <TokenItemImg src={cardPos} />
+                  <Col>
+                    <Text>Sell Tax</Text>
+                    <Text>0%</Text>
+                  </Col>
+                </TokenItem>
+              </TokenItems>
+            </StyledToken>
+          </Col>
+          <RoadmapText>Roadmap</RoadmapText>
+        </div>
       </TokenomicsDiv>
     </Col>
   );

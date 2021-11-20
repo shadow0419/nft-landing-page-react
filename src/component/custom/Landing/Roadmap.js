@@ -15,6 +15,12 @@ const RoadmapDiv = styled.div`
   background-image: url(${roadmap1}), url(${roadmap2}), url(${wave});
   background-position: top, bottom, left;
   background-repeat: no-repeat, no-repeat, no-repeat;
+`;
+const MapContainer = styled.div`
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
   @media only screen and (max-width: 800px) {
     flex-direction: column;
   }
@@ -57,47 +63,49 @@ const Roadmap = () => {
   return (
     <Col id="roadmap">
       <RoadmapDiv>
-        <RoadmapDiv1>
-          <MapItem
-            date="2021 Q4"
-            title="Public Presale"
-            content="Anyone can participate"
-          />
-          <MapItem
-            date="2021 Q4"
-            title="NFT Marketplace"
-            content="Launch of our NFT marketplace with ETH Bridge."
-          />
-          <MapItem
-            date="2021 Q4"
-            title="Staking Platform Launch"
-            content="Anyone can participate"
-          />
-          <MapItem
-            date="2021 Q1"
-            title="MetaMultiplayer Server Launch "
-            content="Stake any amount of MMP tokens on our staking platform, INSANE APY's incoming!"
-          />
-        </RoadmapDiv1>
-        <CenterImg src={bar} />
+        <MapContainer>
+          <RoadmapDiv1>
+            <MapItem
+              date="2021 Q4"
+              title="Public Presale"
+              content="Anyone can participate"
+            />
+            <MapItem
+              date="2021 Q4"
+              title="NFT Marketplace"
+              content="Launch of our NFT marketplace with ETH Bridge."
+            />
+            <MapItem
+              date="2021 Q4"
+              title="Staking Platform Launch"
+              content="Anyone can participate"
+            />
+            <MapItem
+              date="2021 Q1"
+              title="MetaMultiplayer Server Launch "
+              content="Stake any amount of MMP tokens on our staking platform, INSANE APY's incoming!"
+            />
+          </RoadmapDiv1>
+          <CenterImg src={bar} />
 
-        <RoadmapDiv2>
-          <MapItem
-            date="2021 Q4"
-            title="Pancakeswap Launch"
-            content="Pancakeswap Launch - Along with Pancakeswap Listing, We will get listed on Coingecko & Coinmarketcap the same day."
-          />
-          <MapItem
-            date="2021 Q1"
-            title="Metamultiplayer Server Closed Beta Testing"
-            content="e a holder with at least 100,000,000 MMP Tokens to participate in our closed beta testing!"
-          />
-          <MapItem
-            date="2021 Q2"
-            title="Tier 1"
-            content="Central Exchange - More details soon..."
-          />
-        </RoadmapDiv2>
+          <RoadmapDiv2>
+            <MapItem
+              date="2021 Q4"
+              title="Pancakeswap Launch"
+              content="Pancakeswap Launch - Along with Pancakeswap Listing, We will get listed on Coingecko & Coinmarketcap the same day."
+            />
+            <MapItem
+              date="2021 Q1"
+              title="Metamultiplayer Server Closed Beta Testing"
+              content="e a holder with at least 100,000,000 MMP Tokens to participate in our closed beta testing!"
+            />
+            <MapItem
+              date="2021 Q2"
+              title="Tier 1"
+              content="Central Exchange - More details soon..."
+            />
+          </RoadmapDiv2>
+        </MapContainer>
       </RoadmapDiv>
     </Col>
   );
