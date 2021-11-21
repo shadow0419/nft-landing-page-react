@@ -17,7 +17,7 @@ const StyledItem = styled.div`
   padding: 20px 26px 27px 48px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(70px);
-  border-radius: 60px;
+  border-radius: 30px;
 
   width: 100%;
   margin-top: 40px;
@@ -40,9 +40,7 @@ export const MapItem = (props) => {
         <Text fontSize="20px">{props.date}</Text>
       </Datetap>
       <StyledItem>
-        <Text fontSize="23px" lineHeight="50.18px">
-          {props.title}
-        </Text>
+        <Text fontSize="23px">{props.title}</Text>
         <Text
           fontSize="18px"
           lineHeight="34.5pxpx"

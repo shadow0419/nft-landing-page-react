@@ -13,6 +13,7 @@ import { FaBars } from "react-icons/fa";
 import { Button } from "../../../component/common/Button";
 import Particles from "react-particles-js";
 import particlesConfig from "../../../config/particlesConfig";
+import Sidebar from "./Sidebar";
 const LogoIMG = styled.img`
   margin-right: 0.7rem !important;
   border-style: none;
@@ -147,7 +148,6 @@ const WhiteButton = styled.button`
   border-radius: 13px;
 `;
 const RenderItem = ({ selected, name, onSelected }) => {
-  console.log(selected, name);
   return (
     <LinkItem
       sel={
@@ -212,15 +212,28 @@ const GtaImg = styled.img`
 `;
 const Top = () => {
   const [selected, setSelected] = useState("home");
+  const [menushow, setMenushow] = useState(false);
   const [userAccount, setUserAccount] = useState();
   useEffect(() => {
     ConnectWallet();
   }, []);
+  useEffect(() => {
+    setMenushow(localStorage.getItem("rightmenu") === "on" ? true : false);
+  }, [localStorage.getItem("rightmenu")]);
   const ConnectWallet = async () => {
     const web3 = await getWeb3();
     const accounts = await web3.eth.getAccounts();
     setUserAccount(accounts[0]);
   };
+  const MenuShow = () => {
+    if (menushow) {
+      localStorage.setItem("rightmenu", "off");
+    } else {
+      localStorage.setItem("rightmenu", "on");
+    }
+    setMenushow((prev) => !prev);
+  };
+
   return (
     <Col
       id="home"
@@ -231,14 +244,14 @@ const Top = () => {
         <Particles height="100%" width="100%" params={particlesConfig} />
       </div>
       <NavbarBack>
-        {/* <Sidebar /> */}
+        <Sidebar />
         <NavbarView>
           <RowLayout>
             <LogoIMG src={logo} />
             <Text fontFamily={`"Aladin", sans-serif`}>Meta Multiplayer</Text>
           </RowLayout>
           <BarView>
-            <FaBars size="30" color="white" />
+            <FaBars size="30" color="white" onClick={MenuShow} />
           </BarView>
           <LinkLayout>
             {Navbardata.map((item, key) => {
@@ -286,13 +299,6 @@ const Top = () => {
             alignItems: "flex-start",
           }}
         >
-          {/* <img
-            src={line}
-            width="60%"
-            style={{ position: "absolute", left: "-5%" }}
-            alt="line"
-          /> */}
-
           <HeaderText HeaderText>
             Metamultiplayer - First <br />
             Real Metaverse Experience!

@@ -103,7 +103,7 @@ const Presale = () => {
         >
           <img src={metamaskImg} alt="metamask" />
         </Row>
-        <Text fontSize="20px" align="center" margin="0 0 0 10px">
+        <Text fontSize="20px" align="center" margin="0 0 0 10px" flex="none">
           {userAccount
             ? `${userAccount.slice(0, 6)}...${userAccount.slice(
                 userAccount.length - 4,

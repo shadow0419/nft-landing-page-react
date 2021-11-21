@@ -83,7 +83,7 @@ const Money = () => {
               <img src={Vector} alt="frame1" />
               <Text
                 fontSize="20px"
-                align="center"
+                align="left"
                 margin="0 0 0 20px"
                 maxWidth="600px"
                 lineHeight="200%"
@@ -100,7 +100,7 @@ const Money = () => {
               <img src={Frame} alt="frame2" />
               <Text
                 fontSize="20px"
-                align="center"
+                align="left"
                 margin="0 0 0 20px"
                 maxWidth="600px"
                 lineHeight="200%"
@@ -117,7 +117,7 @@ const Money = () => {
               <img src={passove} alt="frame3" />
               <Text
                 fontSize="20px"
-                align="center"
+                align="left"
                 margin="0 0 0 20px"
                 maxWidth="600px"
                 lineHeight="200%"
