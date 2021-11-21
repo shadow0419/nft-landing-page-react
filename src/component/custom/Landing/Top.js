@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import getWeb3 from "../../../getWeb3";
 import { Text } from "../../common/Text";
 import logo from "../../../assets/MetaMultiplayerLogo.png";
-import line from "../../../assets/line.png";
+// import line from "../../../assets/line.png";
 import gtaCha from "../../../assets/gta-cha.png";
 import rlight from "../../../assets/rlight.png";
 import weichle from "../../../assets/weichle.png";
@@ -11,6 +11,8 @@ import styled, { keyframes } from "styled-components";
 import { Col, Row } from "../../common/Layout";
 import { FaBars } from "react-icons/fa";
 import { Button } from "../../../component/common/Button";
+import Particles from "react-particles-js";
+import particlesConfig from "../../../config/particlesConfig";
 const LogoIMG = styled.img`
   margin-right: 0.7rem !important;
   border-style: none;
@@ -186,11 +188,10 @@ const phraseAnim = keyframes`
 }
 `;
 
-export const HeaderText = styled.span`
+const HeaderText = styled.span`
   font-family: Orbitron;
   font-weight: 700;
   font-size: 40px;
-  /* text-align: center; */
   color: white;
   margin: 0 0 0 0;
   animation: ${phraseAnim} ${transitionTime}ms linear 300ms forwards;
@@ -226,6 +227,9 @@ const Top = () => {
       padding="0 50px"
       style={{ position: "relative", backgroundColor: "rgb(29, 10, 51)" }}
     >
+      <div style={{ position: "absolute" }}>
+        <Particles height="100%" width="100%" params={particlesConfig} />
+      </div>
       <NavbarBack>
         {/* <Sidebar /> */}
         <NavbarView>
@@ -282,12 +286,12 @@ const Top = () => {
             alignItems: "flex-start",
           }}
         >
-          <img
+          {/* <img
             src={line}
             width="60%"
             style={{ position: "absolute", left: "-5%" }}
             alt="line"
-          />
+          /> */}
 
           <HeaderText HeaderText>
             Metamultiplayer - First <br />
