@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 // @import component
 import { Text } from "../../common/Text";
+import { Button } from "../../common/Button";
 // @import style
 import { theme } from "../../../theme";
 import styled from "styled-components";
-// @wallet connection
+import logo from "../../../assets/MetaMultiplayerLogo.png";
 const LinkItem = styled.a`
   position: relative;
   cursor: pointer;
   text-decoration: none;
-  // : ;
   span {
     transition: all 0.4s ease-in-out;
     opacity: 0.5;
@@ -61,20 +61,7 @@ const StyledSidebar = styled.div`
     margin-bottom: 20px;
   }
 `;
-const ConnectButton = styled.button`
-  background: linear-gradient(90.76deg, #ff9d2a 3.46%, #ffd707 102.26%);
-  border-radius: 40px;
-  justify-content: center;
-  align-items: center;
-  max-width: 300px;
-  margin: 30px 0 0 0;
-  padding: 5px 0;
-  display: flex;
-  width: 100%;
-  outline: none;
-  cursor: pointer;
-  border: none;
-`;
+
 const RenderItem = ({ selected, name, onSelected }) => {
   return (
     <LinkItem
@@ -94,33 +81,69 @@ const RenderItem = ({ selected, name, onSelected }) => {
     </LinkItem>
   );
 };
+const LogoIMG = styled.img`
+  margin-right: 0.7rem !important;
+  border-style: none;
+  height: 45px;
+`;
+const MenuLogo = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
+const Navbardata = [
+  "Home",
+  "Presale",
+  "Tokenomics",
+  "Roadmap",
+  "NFT",
+  "Supply",
+  "Make money",
+  "FAQ",
+];
 const Sidebar = () => {
+  const MenuRef = useRef(null);
   const [selected, setSelected] = useState("home");
   const [state, setState] = useState({ mobileView: false });
   const { mobileView } = state;
-
+  const handleClickOutside = (e) => {
+    if (MenuRef.current && MenuRef.current.contains(e.target)) {
+      return;
+    }
+    localStorage.setItem("rightmenu", "off");
+  };
   useEffect(() => {
     const setResponsiveness = () => {
-      return window.innerWidth < 768
+      return window.innerWidth < 850
         ? setState((prevState) => ({ ...prevState, mobileView: true }))
         : setState((prevState) => ({ ...prevState, mobileView: false }));
     };
     setResponsiveness();
     window.addEventListener("resize", () => setResponsiveness());
   }, []);
-  const Navbardata = [
-    "Home",
-    "Presale",
-    "Tokenomics",
-    "Roadmap",
-    "NFT",
-    "supply",
-    "Make money",
-    "FAQ",
-  ];
+
+  useEffect(() => {
+    if (localStorage.getItem("rightmenu")) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [localStorage.getItem("rightmenu")]);
+
   return (
     mobileView && (
-      <StyledSidebar onClick={() => localStorage.setItem("rightmenu", "off")}>
+      <StyledSidebar
+        onClick={() => localStorage.setItem("rightmenu", "off")}
+        ref={MenuRef}
+      >
+        <MenuLogo>
+          <LogoIMG src={logo} />
+          <Text fontFamily={`"Aladin", sans-serif`}>Meta Multiplayer</Text>
+        </MenuLogo>
         {Navbardata.map((item, key) => {
           return (
             <RenderItem
@@ -132,7 +155,9 @@ const Sidebar = () => {
           );
         })}
 
-        <ConnectButton>Connect MetaMask</ConnectButton>
+        <Button>
+          <Text>Connect MetaMask</Text>
+        </Button>
       </StyledSidebar>
     )
   );

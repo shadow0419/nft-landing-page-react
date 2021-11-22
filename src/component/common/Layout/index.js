@@ -32,7 +32,9 @@ export const Col = styled.div`
   border-radius: ${(props) => props.borderRadius || 0};
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   overflow: ${(props) => props.overflow || "unset"};
+  z-index: ${(props) => props.zIndex};
   opacity: ${(props) => props.opacity || 1};
+  cursor: ${(props) => props.cursor || "unset"};
   backdrop-filter: ${(props) => props.backdropFilter || "none"};
   & > *:not(:last-child) {
     margin: ${(props) => props.mgap};
@@ -57,6 +59,7 @@ export const Row = styled.div`
   right: ${(props) => props.right || "auto"};
   justify-content: ${(props) => props.justify || "center"};
   align-items: ${(props) => props.align || "center"};
+  z-index: ${(props) => props.zIndex};
   padding: ${(props) => props.padding || "0"};
   margin: ${(props) => props.margin || "0"};
   border-top: ${(props) => props.borderTop || "0"};
@@ -73,6 +76,7 @@ export const Row = styled.div`
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   overflow: ${(props) => props.overflow || "unset"};
   opacity: ${(props) => props.opacity || 1};
+  cursor: ${(props) => props.cursor || "unset"};
   backdrop-filter: ${(props) => props.backdropFilter || "none"};
   & > *:not(:last-child) {
     margin: ${(props) => props.mgap};

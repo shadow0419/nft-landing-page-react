@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import getWeb3 from "../../../getWeb3";
 import { Text } from "../../common/Text";
 import logo from "../../../assets/MetaMultiplayerLogo.png";
-// import line from "../../../assets/line.png";
 import gtaCha from "../../../assets/gta-cha.png";
 import rlight from "../../../assets/rlight.png";
 import weichle from "../../../assets/weichle.png";
 import grand from "../../../assets/grand.png";
 import styled, { keyframes } from "styled-components";
-import { Col, Row } from "../../common/Layout";
+import { Row } from "../../common/Layout";
 import { FaBars } from "react-icons/fa";
 import { Button } from "../../../component/common/Button";
 import Particles from "react-particles-js";
@@ -22,17 +21,20 @@ const LogoIMG = styled.img`
 const NavbarBack = styled.div`
   display: flex;
   justify-content: center;
+
+  top: 0;
+  width: 100%;
+  padding: 0 2rem 1rem 1rem;
+  z-index: 10;
+`;
+
+const NavbarView = styled.div`
   background: -webkit-linear-gradient(
     top,
     rgba(0, 0, 0, 0.65) 0%,
     rgba(0, 0, 0, 0) 100%
   );
-  top: 0;
-  width: 100%;
-  padding: 0 2rem 1rem 1rem;
-`;
 
-const NavbarView = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -41,27 +43,32 @@ const NavbarView = styled.div`
   justify-content: center;
   width: 100%;
   padding: 1.3125rem 0 0.3125rem 0;
-  @media only screen and (max-width: 1200px) {
-    max-width: 960px;
-  }
-  @media only screen and (max-width: 992px) {
-    max-width: 720px;
-  }
-  @media only screen and (max-width: 768px) {
-    max-width: 540px;
-  }
 `;
 const RowLayout = styled.div`
+  display: none;
+  @media only screen and (max-width: 850px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+`;
+const MenuLogo = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
 `;
+
 const BarView = styled.div`
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 850px) {
     display: block;
     position: fixed;
     right: 10px;
   }
+  cursor: pointer;
   display: none;
   svg: {
     cursor: pointer;
@@ -74,7 +81,7 @@ const LinkLayout = styled.div`
   & > *:not(:last-child) {
     margin-right: 2rem;
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 850px) {
     display: none;
   }
 `;
@@ -128,6 +135,44 @@ const IntroButton = styled.button`
   border: none;
   cursor: pointer;
   border-radius: 13px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  :hover {
+    box-shadow: 0px 4px 97px rgba(255, 86, 246, 0.81);
+  }
+  :before {
+    content: "";
+    background: linear-gradient(
+      135deg,
+      #00ffd5,
+      #ff7300,
+      #48ff00,
+      #ff0000,
+      #ff00c8,
+      #fffb00,
+      #ff0000,
+      #7a00ff,
+      #002bff
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  :hover:before {
+    opacity: 1;
+  }
 `;
 const WhiteButton = styled.button`
   padding: 10px 30px;
@@ -144,8 +189,49 @@ const WhiteButton = styled.button`
   box-shadow: 0px 4px 97px rgba(255, 86, 246, 0.51);
   backdrop-filter: blur(192px);
   /* Note: backdrop-filter has minimal browser support */
-
   border-radius: 13px;
+  :hover {
+    box-shadow: 0px 4px 97px rgba(255, 86, 246, 0.81);
+  }
+  :before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff00c8,
+      #ff0000,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  :active {
+    color: #000;
+  }
+
+  :active:after {
+    background: transparent;
+  }
+
+  :hover:before {
+    opacity: 1;
+  }
 `;
 const RenderItem = ({ selected, name, onSelected }) => {
   return (
@@ -172,7 +258,7 @@ const Navbardata = [
   "Tokenomics",
   "Roadmap",
   "NFT",
-  "supply",
+  "Supply",
   "Make money",
   "FAQ",
 ];
@@ -202,12 +288,33 @@ const HeaderText = styled.span`
   @media only screen and (max-width: 500px) {
     font-size: 23px;
     line-height: 50px;
+    text-align: center;
   }
 `;
 const GtaImg = styled.img`
   width: 600px;
   @media only screen and (max-width: 1100px) {
     display: none;
+  }
+`;
+
+const PageStyle = styled.div`
+  width: 100%;
+  padding: 0 50px;
+  position: relative;
+  background-color: rgb(29, 10, 51);
+  z-index: 10;
+  @media only screen and (max-width: 400px) {
+    padding: 0 10px;
+  }
+`;
+const SnowView = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  div {
+    width: 100%;
+    height: 100%;
   }
 `;
 const Top = () => {
@@ -235,14 +342,10 @@ const Top = () => {
   };
 
   return (
-    <Col
-      id="home"
-      padding="0 50px"
-      style={{ position: "relative", backgroundColor: "rgb(29, 10, 51)" }}
-    >
-      <div style={{ position: "absolute" }}>
+    <PageStyle id="home">
+      <SnowView>
         <Particles height="100%" width="100%" params={particlesConfig} />
-      </div>
+      </SnowView>
       <NavbarBack>
         <Sidebar />
         <NavbarView>
@@ -254,6 +357,10 @@ const Top = () => {
             <FaBars size="30" color="white" onClick={MenuShow} />
           </BarView>
           <LinkLayout>
+            <MenuLogo>
+              <LogoIMG src={logo} />
+              <Text fontFamily={`"Aladin", sans-serif`}>Meta Multiplayer</Text>
+            </MenuLogo>
             {Navbardata.map((item, key) => {
               return (
                 <RenderItem
@@ -299,7 +406,7 @@ const Top = () => {
             alignItems: "flex-start",
           }}
         >
-          <HeaderText HeaderText>
+          <HeaderText>
             Metamultiplayer - First <br />
             Real Metaverse Experience!
           </HeaderText>
@@ -307,6 +414,7 @@ const Top = () => {
             margin="40px 0 50px 0"
             lineHeight="39px"
             color="rgba(255, 255, 255, 0.6)"
+            width="90%"
           >
             Play on our GTA 5 roleplay server, Collect & Trade NFT'S, <tr />{" "}
             earn MMP tokens while playing on our server. Join today!
@@ -326,6 +434,7 @@ const Top = () => {
               borderRadius="20px"
               width="60px"
               height="60px"
+              cursor="pointer"
             >
               <img src={weichle} alt="weichle" width="50px" />
             </Row>
@@ -335,6 +444,7 @@ const Top = () => {
               borderRadius="20px"
               width="60px"
               height="60px"
+              cursor="pointer"
             >
               <img src={grand} alt="grand" width="50px" />
             </Row>
@@ -343,6 +453,7 @@ const Top = () => {
               borderRadius="20px"
               width="60px"
               height="60px"
+              cursor="pointer"
             >
               <img src={rlight} alt="rlight" width="100%" />
             </Row>
@@ -350,7 +461,7 @@ const Top = () => {
         </div>
         <GtaImg src={gtaCha} />
       </div>
-    </Col>
+    </PageStyle>
   );
 };
 export default Top;

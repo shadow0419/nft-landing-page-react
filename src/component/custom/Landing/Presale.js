@@ -29,23 +29,63 @@ const StyledInput = styled.input`
   width: 80%;
 `;
 const ConnectButton = styled.button`
-  background: linear-gradient(90.76deg, #ff9d2a 3.46%, #ffd707 102.26%);
-  border-radius: 40px;
+  border-radius: 20px;
   justify-content: center;
   align-items: center;
   max-width: 300px;
   margin: 30px 0 0 0;
   padding: 5px 0;
+  background: linear-gradient(90.76deg, #ff9d2a 3.46%, #ffd707 102.26%);
+  backdrop-filter: blur(192px);
+  box-shadow: 0px 4px 97px rgba(255, 153, 0, 0.51);
   display: flex;
   width: 100%;
   outline: none;
   cursor: pointer;
   border: none;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  :hover {
+    box-shadow: 0px 4px 97px rgba(255, 153, 0, 0.81);
+  }
+  :before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  :hover:before {
+    opacity: 1;
+  }
 `;
 const BuyButton = styled.button`
   background: url(${buyeffect});
   background-color: #16beaa;
-  border-radius: 40px;
+  border-radius: 20px;
   justify-content: center;
   max-width: 300px;
   margin: 43px 0 0 0;
@@ -55,6 +95,40 @@ const BuyButton = styled.button`
   outline: none;
   cursor: pointer;
   border: none;
+  box-shadow: 0px 4px 97px rgba(0, 255, 255, 0.51);
+  position: relative;
+  ::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #00ffd5,
+      #002bff,
+      #48ff00,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  :hover {
+    ::before {
+      opacity: 1;
+    }
+  }
 `;
 const Presale = () => {
   const [userAccount, setUserAccount] = useState();

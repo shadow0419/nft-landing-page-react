@@ -13,6 +13,7 @@ const RoadmapDiv = styled.div`
   align-items: center;
   justify-content: space-between;
   background-image: url(${roadmap1}), url(${roadmap2}), url(${wave});
+  background-size: 100% 60%, 100% 40%, 50%, auto;
   background-position: top, bottom, left;
   background-repeat: no-repeat, no-repeat, no-repeat;
 `;

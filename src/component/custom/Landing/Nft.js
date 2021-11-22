@@ -42,6 +42,7 @@ const NFTImg = styled.div`
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 700px;
+  transition: transform 0.2s;
   height: 600px;
   @media only screen and (max-width: 1024px) {
     width: 650px;
@@ -58,6 +59,9 @@ const NFTImg = styled.div`
     display: block;
     width: 400px;
     height: 300px;
+  }
+  :hover {
+    transform: scale(1.2);
   }
 `;
 const Description = styled.span`

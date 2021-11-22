@@ -84,7 +84,7 @@ const colordata = [
 const BuyButton = styled.button`
   background: url(${buyeffect});
   background-color: #16beaa;
-  border-radius: 40px;
+  border-radius: 20px;
   justify-content: center;
   max-width: 300px;
   margin: 43px 0 0 0;
@@ -93,7 +93,41 @@ const BuyButton = styled.button`
   width: 60%;
   outline: none;
   cursor: pointer;
+  position: relative;
   border: none;
+  box-shadow: 0px 4px 97px rgba(0, 255, 255, 0.51);
+  ::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #00ffd5,
+      #002bff,
+      #48ff00,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  :hover {
+    ::before {
+      opacity: 1;
+    }
+  }
 `;
 const TokenSupply = styled.div`
   display: flex;
