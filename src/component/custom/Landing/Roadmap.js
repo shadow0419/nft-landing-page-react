@@ -2,7 +2,7 @@ import React from "react";
 import { MapItem } from "../../../component/common/MapItem";
 import { Col } from "../../common/Layout";
 import styled from "styled-components";
-import bar from "../../../assets/bar.svg";
+import bar from "../../../assets/dotline.png";
 import roadmap1 from "../../../assets/roadmap1.png";
 import roadmap2 from "../../../assets/roadmap2.png";
 import wave from "../../../assets/wave.png";
@@ -53,13 +53,59 @@ const RoadmapDiv2 = styled.div`
   flex-direction: column;
   margin: 2%;
 `;
-const CenterImg = styled.img`
+const CenterImg = styled.div`
   width: 60px;
   @media only screen and (max-width: 800px) {
     display: none;
   }
-`;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  :before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff00c8,
+      #ff0000,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
 
+  :active {
+    color: #000;
+  }
+
+  :active:after {
+    background: transparent;
+  }
+
+  :hover:before {
+    opacity: 1;
+  }
+`;
+const DashLine = styled.img`
+  height: 170px;
+`;
 const Roadmap = () => {
   return (
     <Col id="roadmap">
@@ -87,7 +133,104 @@ const Roadmap = () => {
               content="Stake any amount of MMP tokens on our staking platform, INSANE APY's incoming!"
             />
           </RoadmapDiv1>
-          <CenterImg src={bar} />
+          <CenterImg>
+            <Col
+              backgroundColor="rgba(255, 255, 255, 0.2)"
+              borderRadius="15px"
+              width="60px"
+              height="60px"
+              align="center"
+              justify="center"
+            >
+              <Col
+                backgroundColor="white"
+                borderRadius="10px"
+                width="35px"
+                height="35px"
+              />
+            </Col>
+            <DashLine src={bar} />
+            <Col
+              backgroundColor="rgba(255, 255, 255, 0.2)"
+              borderRadius="15px"
+              width="60px"
+              height="60px"
+              align="center"
+              justify="center"
+            >
+              <Col
+                backgroundColor="white"
+                borderRadius="10px"
+                width="35px"
+                height="35px"
+              />
+            </Col>
+            <DashLine src={bar} />
+            <Col
+              backgroundColor="rgba(255, 255, 255, 0.2)"
+              borderRadius="15px"
+              width="60px"
+              height="60px"
+              align="center"
+              justify="center"
+            >
+              <Col
+                backgroundColor="white"
+                borderRadius="10px"
+                width="35px"
+                height="35px"
+              />
+            </Col>
+            <DashLine src={bar} />
+            <Col
+              backgroundColor="rgba(255, 255, 255, 0.2)"
+              borderRadius="15px"
+              width="60px"
+              height="60px"
+              align="center"
+              justify="center"
+            >
+              <Col
+                backgroundColor="white"
+                borderRadius="10px"
+                width="35px"
+                height="35px"
+              />
+            </Col>
+            <DashLine src={bar} />
+
+            <Col
+              backgroundColor="rgba(255, 255, 255, 0.2)"
+              borderRadius="15px"
+              width="60px"
+              height="60px"
+              align="center"
+              justify="center"
+            >
+              <Col
+                backgroundColor="white"
+                borderRadius="10px"
+                width="35px"
+                height="35px"
+              />
+            </Col>
+            <DashLine src={bar} />
+            <Col
+              backgroundColor="rgba(255, 255, 255, 0.2)"
+              borderRadius="15px"
+              width="60px"
+              height="60px"
+              align="center"
+              justify="center"
+            >
+              <Col
+                backgroundColor="white"
+                borderRadius="10px"
+                width="35px"
+                height="35px"
+              />
+            </Col>
+          </CenterImg>
 
           <RoadmapDiv2>
             <MapItem

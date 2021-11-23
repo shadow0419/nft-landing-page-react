@@ -321,12 +321,13 @@ const Top = () => {
   const [selected, setSelected] = useState("home");
   const [menushow, setMenushow] = useState(false);
   const [userAccount, setUserAccount] = useState();
+  const menustate = localStorage.getItem("rightmenu");
   useEffect(() => {
     ConnectWallet();
   }, []);
   useEffect(() => {
     setMenushow(localStorage.getItem("rightmenu") === "on" ? true : false);
-  }, [localStorage.getItem("rightmenu")]);
+  }, [menustate]);
   const ConnectWallet = async () => {
     const web3 = await getWeb3();
     const accounts = await web3.eth.getAccounts();
@@ -416,7 +417,7 @@ const Top = () => {
             color="rgba(255, 255, 255, 0.6)"
             width="90%"
           >
-            Play on our GTA 5 roleplay server, Collect & Trade NFT'S, <tr />{" "}
+            Play on our GTA 5 roleplay server, Collect & Trade NFT'S, <br />{" "}
             earn MMP tokens while playing on our server. Join today!
           </Text>
           <Row mgap="0 20px 0 0">

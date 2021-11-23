@@ -107,6 +107,7 @@ const Sidebar = () => {
   const [selected, setSelected] = useState("home");
   const [state, setState] = useState({ mobileView: false });
   const { mobileView } = state;
+  const menustate = localStorage.getItem("rightmenu");
   const handleClickOutside = (e) => {
     if (MenuRef.current && MenuRef.current.contains(e.target)) {
       return;
@@ -132,7 +133,7 @@ const Sidebar = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [localStorage.getItem("rightmenu")]);
+  }, [menustate]);
 
   return (
     mobileView && (

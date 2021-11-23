@@ -15,6 +15,8 @@ const StyledCollapse = styled.div`
 const Arrow = styled.img`
   width: 10px;
   cursor: pointer;
+  transform: ${(props) => (props.hide ? "rotate(0deg)" : "rotate(180deg)")};
+  transition: transform 0.4s;
 `;
 const StyledContent = styled.p`
   font-family: "Gilroy-Medium";
@@ -40,6 +42,7 @@ export const Collapse = (props) => {
           {props.title}
         </Text>
         <Arrow
+          hide={hide}
           src={arrow}
           onClick={() => {
             setHide(!hide);
