@@ -21,6 +21,29 @@ const CoinImg = styled.img`
     display: none;
   }
 `;
+const DescItem = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 10px auto 20px 3%;
+  :hover {
+    img {
+      margin-top: 35px;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    :hover {
+      img {
+        margin-bottom: 50px;
+      }
+    }
+  }
+`;
+const FrontImg = styled.img`
+  transition: 0.5s;
+  margin-top: 10px;
+`;
 const Money = () => {
   return (
     <Col
@@ -33,7 +56,6 @@ const Money = () => {
       <Col
         align="center"
         position="relative"
-        margin="20px 0 0 0"
         backgroundColor="#0E063D"
         opacity=".7"
       >
@@ -49,7 +71,6 @@ const Money = () => {
           fontSize="22px"
           align="center"
           margin="25px 0 0 0"
-          fontFamily="Gilroy-Light"
           lineHeight="200%"
         >
           BY PLAYING ON OUR SERVER
@@ -75,12 +96,8 @@ const Money = () => {
         />
         <Row align="center" justify="center">
           <Col>
-            <Row
-              align="flex-start"
-              justify="flex-start"
-              margin="10px auto 20px 3%"
-            >
-              <img src={Vector} alt="frame1" />
+            <DescItem>
+              <FrontImg src={Vector} />
               <Text
                 fontSize="20px"
                 align="left"
@@ -91,13 +108,9 @@ const Money = () => {
                 We will be holding raffles every week, with some prizes
                 including MMP Tokens, houses, rank upgrades, and more.
               </Text>
-            </Row>
-            <Row
-              align="flex-start"
-              justify="flex-start"
-              margin="10px auto 20px 3%"
-            >
-              <img src={Frame} alt="frame2" />
+            </DescItem>
+            <DescItem>
+              <FrontImg src={Frame} />
               <Text
                 fontSize="20px"
                 align="left"
@@ -108,13 +121,9 @@ const Money = () => {
                 Work and earn - as simple as it sounds! you can work as a Taxi
                 driver, police officer, military service e.t.c
               </Text>
-            </Row>
-            <Row
-              align="flex-start"
-              justify="flex-start"
-              margin="10px auto 100px 3%"
-            >
-              <img src={passove} alt="frame3" />
+            </DescItem>
+            <DescItem>
+              <FrontImg src={passove} />
               <Text
                 fontSize="20px"
                 align="left"
@@ -125,7 +134,7 @@ const Money = () => {
                 Passive income - Own a business or business land and generate a
                 new passive income source!
               </Text>
-            </Row>
+            </DescItem>
           </Col>
           <CoinImg src={coin} alt="coin" />
         </Row>

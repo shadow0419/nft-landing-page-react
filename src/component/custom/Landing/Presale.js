@@ -140,6 +140,7 @@ const Presale = () => {
     const accounts = await web3.eth.getAccounts();
     setUserAccount(accounts[0]);
   };
+
   return (
     <Col
       id="presale"

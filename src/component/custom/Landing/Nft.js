@@ -3,6 +3,7 @@ import { Text } from "../../common/Text";
 import soliderGun from "../../../assets/solider-gun.png";
 import NFT from "../../../assets/NFT.png";
 import { Col } from "../../common/Layout";
+import circle from "../../../assets/token.png";
 import styled from "styled-components";
 const NftView = styled.div`
   position: absolute;
@@ -37,6 +38,7 @@ const SoldierImg = styled.div`
     height: 400px;
   }
 `;
+
 const NFTImg = styled.div`
   background: url(${NFT});
   background-repeat: no-repeat;
@@ -89,7 +91,13 @@ const Description = styled.span`
 `;
 const Nft = () => {
   return (
-    <Col id="nft" position="relative" backgroundColor="#1E1459" align="center">
+    <Col
+      id="nft"
+      position="relative"
+      backgroundColor="#1E1459"
+      align="center"
+      background={`url(${circle})`}
+    >
       <div
         style={{
           display: "flex",
@@ -101,6 +109,7 @@ const Nft = () => {
           position: "relative",
         }}
       >
+        {/* <NftBack src={circle} /> */}
         <NftView>
           <SoldierImg />
           <NFTImg />

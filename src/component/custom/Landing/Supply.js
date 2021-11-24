@@ -162,15 +162,52 @@ const SupplyGrid = styled.div`
   grid-template: repeat(1, 1fr) / repeat(5, 1fr);
   gap: 30px;
   margin: 50px 0 0 0;
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1358px) {
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
     padding: 0 20px 0 20px;
   }
-  @media only screen and (max-width: 500px) {
+
+  @media only screen and (max-width: 850px) {
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    padding: 0 10px 0 10px;
+  }
+  @media only screen and (max-width: 580px) {
     grid-template: repeat(5, 1fr) / repeat(1, 1fr);
     padding: 0 10px 0 10px;
   }
 `;
+const data = [
+  {
+    title: "Jagvar",
+    type: "car",
+    height: "120px",
+    src: jagvar,
+  },
+  {
+    title: "Clothe",
+    type: "Style",
+    height: "180px",
+    src: clothe,
+  },
+  {
+    title: "House (2Bedrooms)",
+    type: "House",
+    height: "240px",
+    src: house,
+  },
+  {
+    title: "Bogati",
+    type: "car",
+    height: "180px",
+    src: bogati,
+  },
+  {
+    title: "Jagvar",
+    type: "car",
+    height: "120px",
+    src: bmw,
+  },
+];
 const Supply = () => {
   return (
     <Col
@@ -180,11 +217,17 @@ const Supply = () => {
       position="relative"
     >
       <SupplyGrid>
-        <SupplyItem img={jagvar} />
-        <SupplyItem img={clothe} />
-        <SupplyItem img={house} />
-        <SupplyItem img={bogati} />
-        <SupplyItem img={bmw} />
+        {data.map((item, key) => {
+          return (
+            <SupplyItem
+              img={item.src}
+              title={item.title}
+              type={item.type}
+              height={item.height}
+              key={key + 1}
+            />
+          );
+        })}
       </SupplyGrid>
       <BuyButton>
         <Text fontSize="24px" align="center">

@@ -127,6 +127,7 @@ const LinkItem = styled.a`
   }
 `;
 const IntroButton = styled.button`
+  z-index: 1;
   background: rgba(255, 255, 255, 0.4);
   box-shadow: 0px 4px 97px rgba(255, 86, 246, 0.51);
   backdrop-filter: blur(192px);
@@ -145,16 +146,16 @@ const IntroButton = styled.button`
   :before {
     content: "";
     background: linear-gradient(
-      135deg,
-      #00ffd5,
-      #ff7300,
-      #48ff00,
-      #ff0000,
+      45deg,
       #ff00c8,
-      #fffb00,
       #ff0000,
+      #00ffd5,
+      #002bff,
       #7a00ff,
-      #002bff
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00
     );
     position: absolute;
     top: -2px;
@@ -170,11 +171,20 @@ const IntroButton = styled.button`
     border-radius: 10px;
   }
 
+  :active {
+    color: #000;
+  }
+
+  :active:after {
+    background: transparent;
+  }
+
   :hover:before {
     opacity: 1;
   }
 `;
 const WhiteButton = styled.button`
+  z-index: 1;
   padding: 10px 30px;
   background: linear-gradient(
     92.23deg,
@@ -317,6 +327,54 @@ const SnowView = styled.div`
     height: 100%;
   }
 `;
+const HeaderIcon = styled.div`
+  background-color: white;
+  padding: 5px;
+  border-radius: 20px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 0px 4px 97px rgba(255, 15, 246, 0.51);
+  transition: 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+  :hover {
+    opacity: 0.9;
+    transform: scale(1.2);
+    box-shadow: 0px 4px 97px rgba(255, 165, 246, 0.51);
+  }
+`;
+
+const GrandIcon = styled.div`
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 5px;
+  border-radius: 20px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 0px 4px 97px rgba(255, 15, 246, 0.51);
+  transition: 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+  :hover {
+    opacity: 0.9;
+    transform: scale(1.2);
+    box-shadow: 0px 4px 97px rgba(255, 165, 246, 0.51);
+  }
+`;
+const RockIcon = styled.div`
+  background-color: yellow;
+  border-radius: 20px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 0px 4px 97px rgba(255, 15, 246, 0.51);
+  transition: 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+  :hover {
+    opacity: 0.9;
+    transform: scale(1.2);
+    box-shadow: 0px 4px 97px rgba(255, 165, 246, 0.51);
+  }
+`;
 const Top = () => {
   const [selected, setSelected] = useState("home");
   const [menushow, setMenushow] = useState(false);
@@ -429,35 +487,15 @@ const Top = () => {
             </IntroButton>
           </Row>
           <Row mgap="0 20px 0 0" margin="100px 0 50px 0">
-            <Row
-              backgroundColor="white"
-              padding="5px"
-              borderRadius="20px"
-              width="60px"
-              height="60px"
-              cursor="pointer"
-            >
+            <HeaderIcon>
               <img src={weichle} alt="weichle" width="50px" />
-            </Row>
-            <Row
-              backgroundColor="rgba(255, 255, 255, 0.3)"
-              padding="5px"
-              borderRadius="20px"
-              width="60px"
-              height="60px"
-              cursor="pointer"
-            >
+            </HeaderIcon>
+            <GrandIcon>
               <img src={grand} alt="grand" width="50px" />
-            </Row>
-            <Row
-              backgroundColor="yellow"
-              borderRadius="20px"
-              width="60px"
-              height="60px"
-              cursor="pointer"
-            >
+            </GrandIcon>
+            <RockIcon>
               <img src={rlight} alt="rlight" width="100%" />
-            </Row>
+            </RockIcon>
           </Row>
         </div>
         <GtaImg src={gtaCha} />

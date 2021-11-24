@@ -7,6 +7,9 @@ const StyledRec = styled.div`
     `linear-gradient(95.03deg, ${props.gfcolor} 0%, ${props.glcolor} 103.72%)`};
   position: relative;
   cursor: pointer;
+  & > * {
+    text-align: center;
+  }
   border-top-right-radius: 35px;
   border-bottom-right-radius: 35px;
   display: flex;
@@ -19,7 +22,6 @@ const StyledRec = styled.div`
     border-radius: 20px;
     font-size: 20px;
     margin-top: -20px !important;
-
     background-color: white;
     color: black;
     ::after {
@@ -32,6 +34,10 @@ const StyledRec = styled.div`
       bottom: -10px !important;
       left: calc(50% - 10px) !important;
     }
+  }
+  transition: 1s;
+  :hover {
+    width: calc((100%-${(props) => props.width}%) * 0.3);
   }
 `;
 

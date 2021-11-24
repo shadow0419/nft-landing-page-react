@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-export const CustomLoadingWrapper = styled.div`
+const CustomLoadingWrapper = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
@@ -13,7 +13,7 @@ export const CustomLoadingWrapper = styled.div`
   background: rgba(0, 0, 0, 0.7);
   flex-direction: column;
 `;
-export const CustomLoadingContent = styled.div`
+const CustomLoadingContent = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -84,6 +84,7 @@ export const Label = styled.span`
     box-shadow: 0 0 20px #fff000;
   }
 `;
+
 const Loading = () => {
   return (
     <CustomLoadingWrapper>

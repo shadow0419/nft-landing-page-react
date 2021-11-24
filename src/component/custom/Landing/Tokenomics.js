@@ -13,16 +13,25 @@ import { Text } from "../../common/Text";
 
 const TokenomicsDiv = styled.div`
   position: relative;
-  background-color: rgb(28, 20, 43);
   background-image: url(${token});
+  background-color: rgb(28, 20, 43);
   backdrop-filter: blur(10px);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-
   margin: auto;
   z-index: 0;
 `;
+
+// const TokenomicsImg = styled.img`
+//   position: absolute;
+//   opacity: 0.3;
+//   height: 100%;
+//   right: -20%;
+
+//   @media only screen and (max-width: 450px) {
+//   }
+// `;
 
 const TokenomicsText = styled.div`
   font-family: Orbitron;
@@ -84,20 +93,20 @@ const TokenItemImg = styled.img``;
 
 const WhiteCar = styled.img`
   position: absolute;
-  top: -110px;
+  bottom: 0;
   right: 0;
   z-index: -1;
   width: 600px;
   @media only screen and (max-width: 750px) {
-    right: -30px;
-    top: 10px;
     width: 400px;
+    right: -50px;
+    bottom: 90px;
   }
 `;
 const BlackCar = styled.img`
   position: absolute;
-  bottom: 120px;
-  left: 5%;
+  top: -80px;
+  left: 0;
   z-index: -1;
   width: 450px;
   @media only screen and (max-width: 750px) {
@@ -108,7 +117,7 @@ const BlackCar = styled.img`
 `;
 const Tokenomics = () => {
   return (
-    <Col id="tokenomics">
+    <Col id="tokenomics" background={`url(${token})`}>
       <TokenomicsDiv>
         <div
           style={{
@@ -120,6 +129,7 @@ const Tokenomics = () => {
             position: "relative",
           }}
         >
+          {/* <TokenomicsImg src={token} /> */}
           <TokenomicsText>Tokenomics</TokenomicsText>
           <WhiteCar src={car1} />
           <BlackCar src={car2} />

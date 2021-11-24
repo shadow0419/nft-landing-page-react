@@ -1,29 +1,43 @@
 import React from "react";
 import { Text } from "../Text";
 import { Col } from "../Layout";
-
+import styled from "styled-components";
+const SupplyStyle = styled.div`
+  align-items: center;
+  border-radius: 45px;
+  background-color: #1e1459;
+  padding: 10px 10px 10px 10px;
+  height: fit-content;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+`;
+export const Product = styled.img`
+  display: flex;
+  flex-direction: column;
+  height: ${(props) => (props.height ? props.height : "auto")};
+  border-radius: 38px;
+  max-width: 240px;
+  transition: transform 0.2s;
+  :hover {
+    transform: scale(1.4);
+  }
+`;
 export const SupplyItem = (props) => {
   return (
-    <Col
-      align="center"
-      borderRadius="45px"
-      backgroundColor="#1E1459"
-      padding="10px 10px 10px 10px"
-      height="fit-content"
-    >
-      <Col backgroundColor="#ffffff" borderRadius="38px">
-        <img
-          src={props.img}
-          alt="supply"
-          style={{ borderRadius: "38px" }}
-          width="100%"
-          height="100%"
-        />
+    <SupplyStyle>
+      <Col
+        backgroundColor="#ffffff"
+        borderRadius="38px"
+        padding="4px"
+        align="center"
+      >
+        <Product src={props.img} height={props.height} />
       </Col>
       <Text fontSize="20px" lineHeight="62.04px">
-        Clothe
+        {props.title}
       </Text>
-      <Text fontSize="14px">Clothe</Text>
-    </Col>
+      <Text fontSize="14px">{props.type}</Text>
+    </SupplyStyle>
   );
 };

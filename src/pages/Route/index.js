@@ -11,6 +11,7 @@ function App() {
       <Router>
         <Switch>
           <Route path={`/`} render={(props) => <Landing {...props} />} />
+          {/* <Route path={`/`} render={(props) => <Loading />} /> */}
         </Switch>
       </Router>
     </Suspense>
