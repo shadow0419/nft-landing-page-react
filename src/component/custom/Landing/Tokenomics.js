@@ -5,7 +5,8 @@ import mmp from "../../../assets/mmp.png";
 import receipt from "../../../assets/receipt.png";
 import buyback from "../../../assets/buyback.png";
 import cardPos from "../../../assets/card-pos.png";
-import token from "../../../assets/token.png";
+import token from "../../../assets/nft.jpg";
+// import token from "../../../assets/token.png";
 import { Col } from "../../common/Layout";
 import { Text } from "../../common/Text";
 
