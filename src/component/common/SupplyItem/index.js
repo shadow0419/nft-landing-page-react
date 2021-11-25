@@ -22,9 +22,9 @@ export const Product = styled.div`
   border-radius: 38px;
   max-width: 240px;
   transition: all 0.5s ease-in;
-  /* & > * { */
   position: relative;
-  /* ::before {
+  overflow: hidden;
+  ::before {
     position: absolute;
     top: 0;
     left: -75%;
@@ -47,8 +47,8 @@ export const Product = styled.div`
     transform: skewX(-25deg);
   }
   :hover::before {
-    -webkit-animation: shine 0.75s;
-    animation: shine 0.75s;
+    -webkit-animation: shine 1.3s;
+    animation: shine 1.3s;
     @-webkit-keyframes shine {
       100% {
         left: 125%;
@@ -59,8 +59,7 @@ export const Product = styled.div`
         left: 125%;
       }
     }
-  } */
-  /* } */
+  }
 `;
 
 export const SupplyItem = (props) => {
@@ -72,10 +71,8 @@ export const SupplyItem = (props) => {
         padding="4px"
         align="center"
       >
-        <Product height={props.height}>
-          {/* <div> */}
-          <img src={props.img} alt="product" />
-          {/* </div> */}
+        <Product>
+          <img src={props.img} style={{ height: props.height }} alt="product" />
         </Product>
       </Col>
       <Text fontSize="20px" lineHeight="62.04px">

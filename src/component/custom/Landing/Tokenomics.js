@@ -15,7 +15,7 @@ const TokenomicsDiv = styled.div`
   background-color: rgb(28, 20, 43);
   backdrop-filter: blur(10px);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   width: 100%;
   margin: auto;
   z-index: 0;

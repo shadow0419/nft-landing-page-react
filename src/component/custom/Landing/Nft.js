@@ -99,7 +99,7 @@ const Nft = () => {
       background={`url(${circle})`}
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
-      backgroundSize="cover"
+      backgroundSize="100% 100%"
     >
       <div
         style={{
