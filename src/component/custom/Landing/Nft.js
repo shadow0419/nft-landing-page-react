@@ -3,7 +3,7 @@ import { Text } from "../../common/Text";
 import soliderGun from "../../../assets/solider-gun.png";
 import NFT from "../../../assets/NFT.png";
 import { Col } from "../../common/Layout";
-import circle from "../../../assets/token.png";
+import circle from "../../../assets/nft2.jpg";
 import styled from "styled-components";
 const NftView = styled.div`
   position: absolute;
@@ -97,6 +97,9 @@ const Nft = () => {
       backgroundColor="#1E1459"
       align="center"
       background={`url(${circle})`}
+      backgroundPosition="center"
+      backgroundRepeat="no-repeat"
+      backgroundSize="cover"
     >
       <div
         style={{
@@ -104,8 +107,8 @@ const Nft = () => {
           flexDirection: "column",
           alignItems: "center",
           maxWidth: "1200px",
-          margin: "auto",
           marginTop: "100px",
+          margin: "auto",
           position: "relative",
         }}
       >
@@ -118,11 +121,11 @@ const Nft = () => {
           fontFamily="Orbitron"
           fontWeight="700"
           fontSize="40px"
-          margin="61px 0 0 0"
+          margin="50px 0 0 0"
         >
           NFT
         </Text>
-        <Col margin="auto auto 100px auto">
+        <Col margin="auto auto 50px auto">
           <Description>
             A new way to own, trade, and battle for unique digital items that
             have value in the real world. Collectible items in games have long

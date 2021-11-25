@@ -10,6 +10,7 @@ export const Text = styled.span`
   font-weight: ${(props) => props.fontWeight || "0"};
   line-height: ${(props) => props.lineHeight || "auto"};
   color: ${(props) => props.color || theme.white};
+  position: ${(props) => props.position || "relative"};
   max-width: ${(props) => props.maxWidth || "auto"};
   text-align: ${(props) => props.align || "left"};
   white-space: ${(props) => props.whiteSpace || "none"};
@@ -18,4 +19,6 @@ export const Text = styled.span`
   background: ${(props) => props.background || "none"};
   cursor: ${(props) => props.cursor || "unset"};
   z-index: ${(props) => props.zIndex || 0};
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
 `;

@@ -6,8 +6,6 @@ import receipt from "../../../assets/receipt.png";
 import buyback from "../../../assets/buyback.png";
 import cardPos from "../../../assets/card-pos.png";
 import token from "../../../assets/token.png";
-import car1 from "../../../assets/car1.png";
-import car2 from "../../../assets/car2.png";
 import { Col } from "../../common/Layout";
 import { Text } from "../../common/Text";
 
@@ -41,19 +39,19 @@ const TokenomicsText = styled.div`
   line-height: 144px;
   color: #ffffff;
   text-align: center;
-  margin-top: 50px;
+  margin-bottom: 130px;
 `;
 
-const RoadmapText = styled.div`
-  font-family: Orbitron;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 144px;
-  color: #ffffff;
-  text-align: center;
-  margin-top: 137px;
-`;
+// const RoadmapText = styled.div`
+//   font-family: Orbitron;
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 40px;
+//   line-height: 144px;
+//   color: #ffffff;
+//   text-align: center;
+//   margin-top: 137px;
+// `;
 const StyledToken = styled.div`
   background-image: url(${token_back});
   background-repeat: no-repeat;
@@ -91,30 +89,6 @@ const TokenItem = styled.div`
 
 const TokenItemImg = styled.img``;
 
-const WhiteCar = styled.img`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  width: 600px;
-  @media only screen and (max-width: 750px) {
-    width: 400px;
-    right: -50px;
-    bottom: 90px;
-  }
-`;
-const BlackCar = styled.img`
-  position: absolute;
-  top: -80px;
-  left: 0;
-  z-index: -1;
-  width: 450px;
-  @media only screen and (max-width: 750px) {
-    left: 0;
-    bottom: 190px;
-    width: 300px;
-  }
-`;
 const Tokenomics = () => {
   return (
     <Col id="tokenomics" background={`url(${token})`}>
@@ -125,14 +99,15 @@ const Tokenomics = () => {
             flexDirection: "column",
             maxWidth: "1200px",
             margin: "auto",
-            marginTop: "100px",
+
+            marginBottom: "300px",
             position: "relative",
           }}
         >
           {/* <TokenomicsImg src={token} /> */}
           <TokenomicsText>Tokenomics</TokenomicsText>
-          <WhiteCar src={car1} />
-          <BlackCar src={car2} />
+          {/* <WhiteCar src={car1} /> */}
+          {/* <BlackCar src={car2} /> */}
           <Col align="center">
             <StyledToken>
               <TokenItems>
@@ -167,7 +142,7 @@ const Tokenomics = () => {
               </TokenItems>
             </StyledToken>
           </Col>
-          <RoadmapText>Roadmap</RoadmapText>
+          {/* <RoadmapText>Roadmap</RoadmapText> */}
         </div>
       </TokenomicsDiv>
     </Col>
