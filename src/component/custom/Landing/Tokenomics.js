@@ -6,7 +6,7 @@ import receipt from "../../../assets/receipt.png";
 import buyback from "../../../assets/buyback.png";
 import cardPos from "../../../assets/card-pos.png";
 import token from "../../../assets/nft.jpg";
-// import token from "../../../assets/token.png";
+import logo from "../../../assets/MetaMultiplayerLogo.png";
 import { Col } from "../../common/Layout";
 import { Text } from "../../common/Text";
 
@@ -41,6 +41,7 @@ const TokenomicsText = styled.div`
   color: #ffffff;
   text-align: center;
   margin-bottom: 130px;
+  z-index: 2;
 `;
 
 // const RoadmapText = styled.div`
@@ -86,6 +87,14 @@ const TokenItem = styled.div`
   flex-direction: row;
   align-items: center;
   padding: 0 15% 0 20%;
+  div {
+    span {
+      background: -webkit-linear-gradient(#eee, green);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+  }
 `;
 
 const TokenItemImg = styled.img``;
@@ -100,11 +109,20 @@ const Tokenomics = () => {
             flexDirection: "column",
             maxWidth: "1200px",
             margin: "auto",
-
             marginBottom: "300px",
             position: "relative",
           }}
         >
+          <img
+            src={logo}
+            style={{
+              position: "absolute",
+              top: "80px",
+              right: "100px",
+              width: "120px",
+            }}
+            alt="logo"
+          />
           {/* <TokenomicsImg src={token} /> */}
           <TokenomicsText>Tokenomics</TokenomicsText>
           {/* <WhiteCar src={car1} /> */}

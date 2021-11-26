@@ -24,6 +24,7 @@ export const Product = styled.div`
   transition: all 0.5s ease-in;
   position: relative;
   overflow: hidden;
+  opacity: 0.2;
   ::before {
     position: absolute;
     top: 0;
@@ -76,9 +77,9 @@ export const SupplyItem = (props) => {
         </Product>
       </Col>
       <Text fontSize="20px" lineHeight="62.04px">
-        {props.title}
+        Coming Soon
       </Text>
-      <Text fontSize="14px">{props.type}</Text>
+      {/* <Text fontSize="14px">{props.type}</Text> */}
     </SupplyStyle>
   );
 };

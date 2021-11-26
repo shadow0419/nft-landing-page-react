@@ -8,47 +8,6 @@ export const ItemView = styled.div`
   width: auto;
   height: 210px;
   margin: 0;
-  & > * {
-    :before {
-      content: "";
-      background: linear-gradient(
-        45deg,
-        #ff0000,
-        #00ffd5,
-        #002bff,
-        #ff7300,
-        #fffb00,
-        #48ff00,
-        #ff00c8,
-        #ff0000,
-        #7a00ff
-      );
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      background-size: 400%;
-      z-index: -1;
-      filter: blur(5px);
-      width: calc(100% + 4px);
-      height: calc(100% + 4px);
-      animation: glowing 20s linear infinite;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-      border-radius: 20px;
-    }
-
-    :active {
-      color: #000;
-    }
-
-    :active:after {
-      background: transparent;
-    }
-
-    :hover:before {
-      opacity: 1;
-    }
-  }
 `;
 const StyledItem = styled.div`
   position: relative;
@@ -62,6 +21,45 @@ const StyledItem = styled.div`
   width: 100%;
   margin-top: 40px;
   cursor: pointer;
+  :before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #00ffd5,
+      #002bff,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #ff00c8,
+      #ff0000,
+      #7a00ff
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 20px;
+  }
+
+  :active {
+    color: #000;
+  }
+
+  :active:after {
+    background: transparent;
+  }
+
+  :hover:before {
+    opacity: 1;
+  }
 `;
 const Datetap = styled.div`
   background: #16beaa;

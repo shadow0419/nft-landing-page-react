@@ -127,7 +127,7 @@ const Faq = () => {
             </Col>
             <Col width="auto" align="center">
               <img src={logoImg} width="120px" alt="logo" />
-              <Row mgap="0 15px 0 0">
+              <Row mgap="0 15px 0 0" margin="30px 0 0 0">
                 <Row
                   backgroundColor="rgba(255, 255, 255, 0.3)"
                   borderRadius="15px"
