@@ -144,16 +144,16 @@ const Faq = () => {
               <InvestImg src={bluezilla} width="150px" height="100px" />
             </InvestLink>
             <InvestLink href="https://genblock.capital/">
-              <InvestImg src={gen} width="300px" height="100px" />
+              <InvestImg src={gen} width="300px" height="70px" />
             </InvestLink>
             <InvestLink href="https://magnusdigitalassets.com/">
               <InvestImg src={magu} width="150px" height="100px" />
             </InvestLink>
             <InvestLink href="https://wealthunion.io">
-              <InvestImg src={wealthunion} width="300px" height="100px" />
+              <InvestImg src={wealthunion} width="300px" height="70px" />
             </InvestLink>
             <InvestLink href="https://synaps.io/">
-              <InvestImg src={synaps} width="150px" height="100px" />
+              <InvestImg src={synaps} width="150px" height="60px" />
             </InvestLink>
             <InvestLink href="https://au21.capital">
               <InvestImg src={au21} width="100px" height="100px" />

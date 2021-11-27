@@ -30,7 +30,7 @@ const TokenomicsDiv = styled.div`
   background-size: 100% 100%;
   width: 100%;
   margin: auto;
-  z-index: 0;
+  z-index: 2;
 `;
 
 const TokenomicsText = styled.div`
@@ -45,27 +45,27 @@ const TokenomicsText = styled.div`
   z-index: 2;
 `;
 
-// const RoadmapText = styled.div`
-//   font-family: Orbitron;
-//   font-style: normal;
-//   font-weight: 700;
-//   font-size: 40px;
-//   line-height: 144px;
-//   color: #ffffff;
-//   text-align: center;
-//   margin-top: 137px;
-// `;
 const StyledToken = styled.div`
   background-image: url(${token_back});
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50px;
   width: 90%;
+  position: relative;
+  &::after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 200, 0.3);
+    border-radius: 50px;
+  }
 `;
 const TokenItems = styled.div`
   display: grid;
   grid-template: repeat(1, 1fr) / repeat(4, 1fr);
-  backdrop-filter: blur(10px);
   padding: 50px 0;
   border-radius: 50px;
   margin: auto;
@@ -88,7 +88,7 @@ const TokenItem = styled.div`
   flex-direction: row;
   align-items: center;
   padding: 0 15% 0 20%;
-
+  z-index: 2;
   div {
     background: #16beaa;
     border-radius: 10px;
