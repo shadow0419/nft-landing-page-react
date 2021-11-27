@@ -4,7 +4,7 @@ import soliderGun from "../../../assets/solider-gun.png";
 import NFT from "../../../assets/NFT.png";
 // import circle from "../../../assets/roadmap.jpg";
 import { Col } from "../../common/Layout";
-import circle from "../../../assets/nft2.jpg";
+
 import styled from "styled-components";
 const StyledNFT = styled.div`
   display: flex;
@@ -13,7 +13,6 @@ const StyledNFT = styled.div`
   position: relative;
   background-color: #1e1459;
   align-items: center;
-  background: url(${circle});
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;

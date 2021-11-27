@@ -139,7 +139,7 @@ const Faq = () => {
           >
             Our Investors
           </Text>
-          <Row wrap="wrap" margin="10px 0 0 0" maxWidth="670px">
+          <Row wrap="wrap" margin="10px 0 0 0" maxWidth="1200px">
             <InvestLink href="https://bluezilla.vc">
               <InvestImg src={bluezilla} width="150px" height="100px" />
             </InvestLink>

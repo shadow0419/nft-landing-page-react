@@ -3,9 +3,8 @@ import { MapItem } from "../../../component/common/MapItem";
 import { Col } from "../../common/Layout";
 import styled from "styled-components";
 import bar from "../../../assets/dotline.png";
-import roadmap1 from "../../../assets/roadmap1.png";
-import roadmap2 from "../../../assets/roadmap2.png";
-import wave from "../../../assets/wave.png";
+import roadmap from "../../../assets/roadmap.jpg";
+
 import { Text } from "../../common/Text";
 const RoadmapDiv = styled.div`
   width: 100%;
@@ -13,8 +12,8 @@ const RoadmapDiv = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url(${roadmap1}), url(${roadmap2}), url(${wave});
-  background-size: 100% 60%, 100% 40%, 50%, auto;
+  background-image: url(${roadmap});
+  background-size: 100% 100%;
   background-position: top, bottom, left;
   background-repeat: no-repeat, no-repeat, no-repeat;
 `;

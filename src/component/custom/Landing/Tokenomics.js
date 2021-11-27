@@ -98,21 +98,21 @@ const TokenItem = styled.div`
     text-align: center;
     box-shadow: 0px 4px 97px rgba(22, 190, 170, 0.51);
     :hover {
-      box-shadow: 0px 4px 97px rgba(255, 153, 0, 0.81);
+      box-shadow: 0px 4px 97px rgba(255, 86, 246, 0.81);
     }
     :before {
       content: "";
       background: linear-gradient(
         45deg,
-        #fffb00,
-        #48ff00,
         #ff00c8,
-        #7a00ff,
-        #ff0000,
         #ff0000,
         #00ffd5,
         #002bff,
-        #ff7300
+        #7a00ff,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00
       );
       position: absolute;
       top: -2px;
@@ -126,6 +126,14 @@ const TokenItem = styled.div`
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
       border-radius: 10px;
+    }
+
+    :active {
+      color: #000;
+    }
+
+    :active:after {
+      background: transparent;
     }
 
     :hover:before {
