@@ -9,11 +9,22 @@ import token from "../../../assets/nft.jpg";
 import logo from "../../../assets/MetaMultiplayerLogo.png";
 import { Col } from "../../common/Layout";
 import { Text } from "../../common/Text";
-
+const StyledView = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: url(${token});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  @media only screen and (max-width: 550px) {
+    background-size: cover;
+  }
+`;
 const TokenomicsDiv = styled.div`
   position: relative;
   background-image: url(${token});
-  background-color: rgb(28, 20, 43);
+  background-color: red;
   backdrop-filter: blur(10px);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -21,16 +32,6 @@ const TokenomicsDiv = styled.div`
   margin: auto;
   z-index: 0;
 `;
-
-// const TokenomicsImg = styled.img`
-//   position: absolute;
-//   opacity: 0.3;
-//   height: 100%;
-//   right: -20%;
-
-//   @media only screen and (max-width: 450px) {
-//   }
-// `;
 
 const TokenomicsText = styled.div`
   font-family: Orbitron;
@@ -137,7 +138,7 @@ const TokenItemImg = styled.img``;
 
 const Tokenomics = () => {
   return (
-    <Col id="tokenomics" background={`url(${token})`}>
+    <StyledView id="tokenomics">
       <TokenomicsDiv>
         <div
           style={{
@@ -200,7 +201,7 @@ const Tokenomics = () => {
           {/* <RoadmapText>Roadmap</RoadmapText> */}
         </div>
       </TokenomicsDiv>
-    </Col>
+    </StyledView>
   );
 };
 export default Tokenomics;

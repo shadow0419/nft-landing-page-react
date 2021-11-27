@@ -1,14 +1,13 @@
 import React from "react";
-import { Text } from "../Text";
 import { Col } from "../Layout";
 import styled from "styled-components";
+import mark from "../../../assets/mark.png";
 const SupplyStyle = styled.div`
   align-items: center;
   border-radius: 45px;
   background-color: #1e1459;
   padding: 10px 10px 10px 10px;
   height: fit-content;
-
   display: flex;
   flex-direction: column;
   :hover {
@@ -24,9 +23,7 @@ export const Product = styled.div`
   transition: all 0.5s ease-in;
   position: relative;
   overflow: hidden;
-  img {
-    opacity: 0.2;
-  }
+
   ::before {
     position: absolute;
     top: 0;
@@ -65,6 +62,12 @@ export const Product = styled.div`
   }
 `;
 
+const MarkImg = styled.img`
+  position: absolute;
+  width: 100%;
+  height: 200px;
+`;
+
 export const SupplyItem = (props) => {
   return (
     <SupplyStyle>
@@ -77,25 +80,12 @@ export const SupplyItem = (props) => {
         <Product>
           <img
             src={props.img}
-            style={{ height: props.height, width: "100%" }}
+            style={{ height: props.height, width: "100%", opacity: 0 }}
             alt="product"
           />
-          <Text
-            fontSize="25px"
-            fontWeight="600"
-            lineHeight="62.04px"
-            color="#ff0000"
-            position="absolute"
-            margin="20px 0 0 0"
-            width="100%"
-            align="center"
-          >
-            Coming Soon
-          </Text>
+          <MarkImg src={mark} />
         </Product>
       </Col>
-
-      {/* <Text fontSize="14px">{props.type}</Text> */}
     </SupplyStyle>
   );
 };

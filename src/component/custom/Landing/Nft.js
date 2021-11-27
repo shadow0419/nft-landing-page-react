@@ -6,6 +6,21 @@ import NFT from "../../../assets/NFT.png";
 import { Col } from "../../common/Layout";
 import circle from "../../../assets/nft2.jpg";
 import styled from "styled-components";
+const StyledNFT = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  background-color: #1e1459;
+  align-items: center;
+  background: url(${circle});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  @media only screen and (max-width: 550px) {
+    background-size: cover;
+  }
+`;
 const NftView = styled.div`
   position: absolute;
   display: flex;
@@ -92,16 +107,7 @@ const Description = styled.span`
 `;
 const Nft = () => {
   return (
-    <Col
-      id="nft"
-      position="relative"
-      backgroundColor="#1E1459"
-      align="center"
-      background={`url(${circle})`}
-      backgroundPosition="center"
-      backgroundRepeat="no-repeat"
-      backgroundSize="100% 100%"
-    >
+    <StyledNFT id="nft">
       <div
         style={{
           display: "flex",
@@ -113,7 +119,6 @@ const Nft = () => {
           position: "relative",
         }}
       >
-        {/* <NftBack src={circle} /> */}
         <NftView>
           <SoldierImg />
           <NFTImg />
@@ -139,7 +144,7 @@ const Nft = () => {
           </Description>
         </Col>
       </div>
-    </Col>
+    </StyledNFT>
   );
 };
 export default Nft;

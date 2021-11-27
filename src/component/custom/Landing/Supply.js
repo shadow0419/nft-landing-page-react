@@ -153,31 +153,31 @@ const data = [
   {
     title: "Jagvar",
     type: "car",
-    height: "120px",
+    height: "170px",
     src: jagvar,
   },
   {
     title: "Clothe",
     type: "Style",
-    height: "180px",
+    height: "230px",
     src: clothe,
   },
   {
     title: "House (2Bedrooms)",
     type: "House",
-    height: "240px",
+    height: "280px",
     src: house,
   },
   {
     title: "Bogati",
     type: "car",
-    height: "180px",
+    height: "230px",
     src: bogati,
   },
   {
     title: "Jagvar",
     type: "car",
-    height: "120px",
+    height: "170px",
     src: bmw,
   },
 ];

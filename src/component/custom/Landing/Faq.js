@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { Text } from "../../common/Text";
 import { Col, Row } from "../../common/Layout";
 import faqImg from "../../../assets/car-slider.png";
@@ -8,7 +9,25 @@ import link from "../../../assets/link.png";
 import juli from "../../../assets/juli.png";
 import { Collapse } from "../../../component/common/Collapse";
 import { FaTwitter, FaYoutube, FaTelegramPlane } from "react-icons/fa";
-import styled from "styled-components";
+//////////////////////////////////////////////
+import au21 from "../../../assets/invester/au21.png";
+import bbs from "../../../assets/invester/bbs.png";
+import bca from "../../../assets/invester/bca.png";
+import gen from "../../../assets/invester/gen.png";
+import magu from "../../../assets/invester/magu.png";
+import bluezilla from "../../../assets/invester/bluezilla.png";
+import dutch from "../../../assets/invester/dutch.png";
+import everse from "../../../assets/invester/everse.png";
+import ferum from "../../../assets/invester/ferum.png";
+import gem from "../../../assets/invester/gem.png";
+import oddiyana from "../../../assets/invester/oddiyana.png";
+import qig from "../../../assets/invester/qig.png";
+import r930 from "../../../assets/invester/r930.png";
+import shark from "../../../assets/invester/shark.png";
+import synaps from "../../../assets/invester/synaps.png";
+import vespertine from "../../../assets/invester/vespertine.png";
+import wealthunion from "../../../assets/invester/wealthunion.png";
+import x21 from "../../../assets/invester/x21.png";
 const data = [
   {
     title: "How can I participate in closed beta?",
@@ -34,7 +53,7 @@ const data = [
 ];
 const StyledFooter = styled.div`
   background: ${`url(${gtavImg})`};
-  margin: 200px 0 0 0;
+  margin: 100px 0 0 0;
   width: 100%;
 `;
 const FooterContainer = styled.div`
@@ -58,6 +77,20 @@ const FooterBody = styled.div`
     align-items: flex-start;
   }
 `;
+
+const Investors = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+const InvestImg = styled.img`
+  margin: 1.5rem;
+`;
+const InvestLink = styled.a`
+  display: contents;
+  cursor: pointer;
+`;
 const Faq = () => {
   return (
     <Col id="faq" backgroundColor="rgb(30, 23, 50)">
@@ -71,6 +104,7 @@ const Faq = () => {
         >
           FAQ
         </Text>
+
         <Col
           background={`url(${faqImg})`}
           height="100%"
@@ -93,6 +127,75 @@ const Faq = () => {
             );
           })}
         </Col>
+      </Col>
+      <Col align="center">
+        <Investors>
+          <Text
+            fontSize="2.5rem"
+            fontFamily="Philosopher"
+            align="center"
+            fontWeight="700"
+            margin="20px 0 0 0"
+          >
+            Our Investors
+          </Text>
+          <Row wrap="wrap" margin="10px 0 0 0" maxWidth="670px">
+            <InvestLink href="https://bluezilla.vc">
+              <InvestImg src={bluezilla} width="150px" height="100px" />
+            </InvestLink>
+            <InvestLink href="https://genblock.capital/">
+              <InvestImg src={gen} width="300px" height="100px" />
+            </InvestLink>
+            <InvestLink href="https://magnusdigitalassets.com/">
+              <InvestImg src={magu} width="150px" height="100px" />
+            </InvestLink>
+            <InvestLink href="https://wealthunion.io">
+              <InvestImg src={wealthunion} width="300px" height="100px" />
+            </InvestLink>
+            <InvestLink href="https://synaps.io/">
+              <InvestImg src={synaps} width="150px" height="100px" />
+            </InvestLink>
+            <InvestLink href="https://au21.capital">
+              <InvestImg src={au21} width="100px" height="100px" />
+            </InvestLink>
+            <InvestLink href="https://oddiyana.ventures">
+              <InvestImg src={oddiyana} width="100px" height="100px" />
+            </InvestLink>
+            <InvestLink href="https://moonwhale.ventures">
+              <InvestImg src={shark} width="150px" height="100px" />
+            </InvestLink>
+            <InvestLink href="https://oiginvest.com">
+              <InvestImg src={qig} width="150px" height="100px" />
+            </InvestLink>
+            <InvestLink href="https://dutchcryptoinvestors.com">
+              <InvestImg src={dutch} width="150px" height="100px" />
+            </InvestLink>
+            <InvestLink href="https://www.vespertine.capital">
+              <InvestImg src={vespertine} width="100px" height="100px" />
+            </InvestLink>
+            <InvestLink href="https://www.bbscapital.com">
+              <InvestImg src={bbs} width="250px" height="100px" />
+            </InvestLink>
+            <InvestLink href="https://bcainvestments.com">
+              <InvestImg src={bca} width="218px" height="100px" />
+            </InvestLink>
+            <InvestLink href="https://eversecapital.com/">
+              <InvestImg src={everse} width="175px" height="100px" />
+            </InvestLink>
+            <InvestLink href="https://gemcapital.io/">
+              <InvestImg src={gem} width="230px" height="100px" />
+            </InvestLink>
+            <InvestLink href="https://r-930capital.com/">
+              <InvestImg src={r930} width="300px" height="100px" />
+            </InvestLink>
+            <InvestLink href="https://x21digital.com/">
+              <InvestImg src={x21} width="100px" height="100px" />
+            </InvestLink>
+            <InvestLink href="https://x21digital.com/">
+              <InvestImg src={ferum} width="300px" height="55px" />
+            </InvestLink>
+          </Row>
+        </Investors>
       </Col>
       <StyledFooter>
         <FooterContainer>
