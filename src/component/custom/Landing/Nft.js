@@ -2,6 +2,7 @@ import React from "react";
 import { Text } from "../../common/Text";
 import soliderGun from "../../../assets/solider-gun.png";
 import NFT from "../../../assets/NFT.png";
+// import circle from "../../../assets/roadmap.jpg";
 import { Col } from "../../common/Layout";
 import circle from "../../../assets/nft2.jpg";
 import styled from "styled-components";

@@ -87,12 +87,48 @@ const TokenItem = styled.div`
   flex-direction: row;
   align-items: center;
   padding: 0 15% 0 20%;
+
   div {
-    span {
-      background: -webkit-linear-gradient(#eee, green);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: bold;
+    background: #16beaa;
+    border-radius: 10px;
+    z-index: 0;
+    padding: 5px 5px 5px 8px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0px 4px 97px rgba(22, 190, 170, 0.51);
+    :hover {
+      box-shadow: 0px 4px 97px rgba(255, 153, 0, 0.81);
+    }
+    :before {
+      content: "";
+      background: linear-gradient(
+        45deg,
+        #fffb00,
+        #48ff00,
+        #ff00c8,
+        #7a00ff,
+        #ff0000,
+        #ff0000,
+        #00ffd5,
+        #002bff,
+        #ff7300
+      );
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing 20s linear infinite;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+    }
+
+    :hover:before {
+      opacity: 1;
     }
   }
 `;

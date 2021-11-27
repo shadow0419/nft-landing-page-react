@@ -8,7 +8,7 @@ const SupplyStyle = styled.div`
   background-color: #1e1459;
   padding: 10px 10px 10px 10px;
   height: fit-content;
-  cursor: pointer;
+
   display: flex;
   flex-direction: column;
   :hover {
@@ -24,7 +24,9 @@ export const Product = styled.div`
   transition: all 0.5s ease-in;
   position: relative;
   overflow: hidden;
-  opacity: 0.2;
+  img {
+    opacity: 0.2;
+  }
   ::before {
     position: absolute;
     top: 0;
@@ -73,12 +75,26 @@ export const SupplyItem = (props) => {
         align="center"
       >
         <Product>
-          <img src={props.img} style={{ height: props.height }} alt="product" />
+          <img
+            src={props.img}
+            style={{ height: props.height, width: "100%" }}
+            alt="product"
+          />
+          <Text
+            fontSize="25px"
+            fontWeight="600"
+            lineHeight="62.04px"
+            color="#ff0000"
+            position="absolute"
+            margin="20px 0 0 0"
+            width="100%"
+            align="center"
+          >
+            Coming Soon
+          </Text>
         </Product>
       </Col>
-      <Text fontSize="20px" lineHeight="62.04px">
-        Coming Soon
-      </Text>
+
       {/* <Text fontSize="14px">{props.type}</Text> */}
     </SupplyStyle>
   );
