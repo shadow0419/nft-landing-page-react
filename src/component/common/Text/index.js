@@ -21,4 +21,5 @@ export const Text = styled.span`
   z-index: ${(props) => props.zIndex || 0};
   top: ${(props) => props.top};
   left: ${(props) => props.left};
+  transform: ${(props) => props.rotate || "rotate(0)"};
 `;

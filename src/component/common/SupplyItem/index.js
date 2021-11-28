@@ -1,7 +1,7 @@
 import React from "react";
 import { Col } from "../Layout";
 import styled from "styled-components";
-import mark from "../../../assets/mark.png";
+import { Text } from "../Text";
 const SupplyStyle = styled.div`
   align-items: center;
   border-radius: 45px;
@@ -62,12 +62,6 @@ export const Product = styled.div`
   }
 `;
 
-const MarkImg = styled.img`
-  position: absolute;
-  width: 100%;
-  height: 200px;
-`;
-
 export const SupplyItem = (props) => {
   return (
     <SupplyStyle>
@@ -83,7 +77,18 @@ export const SupplyItem = (props) => {
             style={{ height: props.height, width: "100%", opacity: 0 }}
             alt="product"
           />
-          <MarkImg src={mark} />
+          <Text
+            color="#9F3FFF"
+            fontWeight="700"
+            fontFamily="Permanent Marker"
+            position="absolute"
+            fontSize="29px"
+            top="40%"
+            left="10%"
+            rotate="rotate(45deg)"
+          >
+            Coming Soon
+          </Text>
         </Product>
       </Col>
     </SupplyStyle>
