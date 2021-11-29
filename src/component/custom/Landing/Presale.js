@@ -48,6 +48,7 @@ const ConnectButton = styled.button`
   height: calc(100% + 4px);
   animation: glowing 20s linear infinite;
   transition: opacity 0.3s ease-in-out;
+  z-index: 5;
   :hover {
     box-shadow: 0px 4px 97px rgba(255, 153, 0, 0.81);
   }
@@ -120,6 +121,7 @@ const Presale = () => {
       width="100%"
       align="center"
       padding="36px 0 88px 0"
+      position="relative"
     >
       <Text
         fontFamily="Orbitron"
@@ -163,7 +165,18 @@ const Presale = () => {
         maxWidth="600px"
         align="center"
         margin="32px 0 0 0"
+        position="relative"
       >
+        <Col
+          position="absolute"
+          backdropFilter="blur(3px)"
+          width="100%"
+          height="100%"
+          align="center"
+          zIndex="4"
+          topp="0"
+          left="0"
+        ></Col>
         <Col align="center" mgap="0 0 30px 0">
           <BuyInput>
             <StyledInput disabled placeholder="BNB" />

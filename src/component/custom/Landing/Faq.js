@@ -132,7 +132,7 @@ const Faq = () => {
         <Investors>
           <Text
             fontSize="2.5rem"
-            fontFamily="Orbitron"
+            fontFamily="Permanent Marker"
             align="center"
             fontWeight="700"
             margin="20px 0 0 0"
