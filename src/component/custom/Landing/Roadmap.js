@@ -64,7 +64,7 @@ const CenterImg = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  /* :before {
+  :before {
     content: "";
     background: linear-gradient(
       45deg,
@@ -102,7 +102,7 @@ const CenterImg = styled.div`
 
   :hover:before {
     opacity: 1;
-  } */
+  }
 `;
 const DashLine = styled.img`
   height: 170px;

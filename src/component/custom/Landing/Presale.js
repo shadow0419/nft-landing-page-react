@@ -131,10 +131,10 @@ const Presale = () => {
       >
         Presale
       </Text>
-      <Text fontSize="20px" align="center" margin="10px 0 0 0" maxWidth="700px">
+      {/* <Text fontSize="20px" align="center" margin="10px 0 0 0" maxWidth="700px">
         Make sure to use Metamask/Trust Wallet to interact with this form. Min
         Contribution: 0.1 BNB Max Contribution : 5 BNB
-      </Text>
+      </Text> */}
       <ConnectButton
         onClick={() => {
           ConnectWallet();

@@ -131,7 +131,7 @@ const IntroButton = styled.button`
   background: rgba(255, 255, 255, 0.4);
   box-shadow: 0px 4px 97px rgba(255, 86, 246, 0.51);
   backdrop-filter: blur(192px);
-  padding: 10px 30px;
+  /* padding: 10px 30px; */
   outline: none;
   border: none;
   cursor: pointer;
@@ -185,7 +185,7 @@ const IntroButton = styled.button`
 `;
 const WhiteButton = styled.button`
   z-index: 1;
-  padding: 10px 30px;
+  /* padding: 15px 30px; */
   background: linear-gradient(
     92.23deg,
     #ff56f6 21.43%,
