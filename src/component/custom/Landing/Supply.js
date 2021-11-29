@@ -23,6 +23,7 @@ const colordata = [
     glcolor: "#FF3333",
     describe: "Ingame Events & Airdrops",
     width: 9,
+    count: "50,000,000,000",
   },
   {
     percent: 5,
@@ -30,6 +31,7 @@ const colordata = [
     glcolor: "#FFD707",
     describe: "Marketing",
     width: 9,
+    count: "50,000,000,000",
   },
   {
     percent: 5,
@@ -37,6 +39,7 @@ const colordata = [
     glcolor: "#9F3FFF",
     describe: "Charity Wallet (Community members choose the organisation)",
     width: 9,
+    count: "50,000,000,000",
   },
   {
     percent: 10,
@@ -44,6 +47,7 @@ const colordata = [
     glcolor: "#3014DE",
     describe: "Public Sale",
     width: 10,
+    count: "100,000,000,000",
   },
   {
     percent: 10,
@@ -51,6 +55,7 @@ const colordata = [
     glcolor: "#36BA20",
     describe: "Game Development",
     width: 10,
+    count: "100,000,000,000",
   },
   {
     percent: 10,
@@ -58,6 +63,7 @@ const colordata = [
     glcolor: "#20BA8C",
     describe: "Staking Rewards",
     width: 10,
+    count: "100,000,000,000",
   },
   {
     percent: 10,
@@ -65,6 +71,7 @@ const colordata = [
     glcolor: "#BA2020",
     describe: "Periodic Burns",
     width: 10,
+    count: "100,000,000,000",
   },
   {
     percent: 15,
@@ -72,6 +79,7 @@ const colordata = [
     glcolor: "#5B20BA",
     describe: "Ecosystem ($MMP Foundation)",
     width: 13,
+    count: "150,000,000,000",
   },
   {
     percent: 30,
@@ -79,6 +87,7 @@ const colordata = [
     glcolor: "#BA2073 ",
     describe: "Pancakeswap Listing",
     width: 20,
+    count: "300,000,000,000",
   },
 ];
 const BuyButton = styled.button`

@@ -61,7 +61,7 @@ export const CountItem = ({ item, index }) => {
           effect="solid"
           globalEventOff="click"
         >
-          <Text color="black">{item.percent} </Text>
+          <Text color="black">{item.count} </Text>
         </ReactTooltip>
       </StyledRec>
     </>

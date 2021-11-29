@@ -169,7 +169,7 @@ const Presale = () => {
       >
         <Col
           position="absolute"
-          backdropFilter="blur(3px)"
+          backdropFilter="blur(1px)"
           width="100%"
           height="100%"
           align="center"
