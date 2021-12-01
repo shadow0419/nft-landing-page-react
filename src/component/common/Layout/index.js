@@ -35,6 +35,7 @@ export const Col = styled.div`
   z-index: ${(props) => props.zIndex};
   opacity: ${(props) => props.opacity || 1};
   cursor: ${(props) => props.cursor || "unset"};
+  box-shadow: ${(props) => props.shadow || 0};
   backdrop-filter: ${(props) => props.backdropFilter || "none"};
   & > *:not(:last-child) {
     margin: ${(props) => props.mgap};
@@ -62,6 +63,7 @@ export const Row = styled.div`
   z-index: ${(props) => props.zIndex};
   padding: ${(props) => props.padding || "0"};
   margin: ${(props) => props.margin || "0"};
+  border: ${(props) => props.border || "0"};
   border-top: ${(props) => props.borderTop || "0"};
   border-bottom: ${(props) => props.borderBottom || "0"};
   border-bottom-color: ${(props) => props.borderBottomColor || "0"};

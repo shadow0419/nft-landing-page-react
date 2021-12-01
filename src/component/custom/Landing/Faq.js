@@ -131,13 +131,13 @@ const Faq = () => {
       <Col align="center">
         <Investors>
           <Text
-            fontSize="2.5rem"
-            fontFamily="Permanent Marker"
-            align="center"
+            fontFamily="Orbitron"
             fontWeight="700"
-            margin="20px 0 0 0"
+            fontSize="40px"
+            align="center"
+            margin="50px 0 0 0"
           >
-            Our Partners
+            Out partners
           </Text>
           <Row wrap="wrap" margin="10px 0 0 0" maxWidth="1200px">
             <InvestLink href="https://bluezilla.vc">

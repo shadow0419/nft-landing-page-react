@@ -3,7 +3,7 @@ import styled from "styled-components";
 // @import component
 import { Text } from "../../common/Text";
 // @import assets
-import presaleImg from "../../../assets/descomposition.png";
+import presaleImg from "../../../assets/descomposition.svg";
 import metamaskImg from "../../../assets/metamask.png";
 import bnbImg from "../../../assets/binance-coin-logo.png";
 import MetaMultiplayerLogo from "../../../assets/MetaMultiplayerLogo.png";
@@ -12,14 +12,16 @@ import getWeb3 from "../../../getWeb3";
 import { Row, Col } from "../../common/Layout";
 const BuyInput = styled.div`
   max-width: 450px;
-  background: #fefefe;
+  background: trasparent;
   border-radius: 40px;
+  border: 3px solid #ffffff;
   padding: 10px 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 80%;
   justify-content: space-between;
+  box-shadow: ${(props) => props.shadow || 0};
 `;
 const StyledInput = styled.input`
   font-size: 20px;
@@ -28,6 +30,9 @@ const StyledInput = styled.input`
   border: none;
   outline: none;
   width: 80%;
+  &::placeholder {
+    color: white;
+  }
 `;
 const ConnectButton = styled.button`
   border-radius: 20px;
@@ -160,42 +165,47 @@ const Presale = () => {
       <Col
         padding="45px 0 33.3px 0"
         background="rgba(255, 255, 255, 0.1)"
-        backdropFilter="blur(200px)"
+        backdropFilter="blur(20px) grayscale(1);"
         borderRadius="60px"
         maxWidth="600px"
         align="center"
         margin="32px 0 0 0"
         position="relative"
+        opacity="0.63"
+        shadow="0px 0px 30px #ffffff;"
       >
-        <Col
+        <Text
+          fontWeight="700"
+          fontFamily="Orbitron"
           position="absolute"
-          backdropFilter="blur(1px)"
-          width="100%"
-          height="100%"
-          align="center"
-          zIndex="4"
-          topp="0"
-          left="0"
-        ></Col>
+          fontSize="45px"
+          rotate="rotate(-27deg)"
+          margin="15%"
+          zIndex="5"
+        >
+          Coming Soon
+        </Text>
         <Col align="center" mgap="0 0 30px 0">
-          <BuyInput>
+          <BuyInput shadow="0px 0px 20px #ffffff">
             <StyledInput disabled placeholder="BNB" />
             <Row
               width="40px"
               height="40px"
-              backgroundColor="rgba(92, 92, 92, 0.1)"
+              backgroundColor="rgba(92, 92, 92, 0.9)"
               borderRadius="100%"
+              border="3px solid #ffffff"
             >
               <img src={bnbImg} alt="bnb" width="30px" />
             </Row>
           </BuyInput>
-          <BuyInput>
+          <BuyInput shadow="0px 0px 20px #ffffff">
             <StyledInput disabled placeholder="MMP" />
             <Row
               width="40px"
               height="40px"
-              backgroundColor="rgba(92, 92, 92, 0.1)"
+              backgroundColor="rgba(92, 92, 92, 0.9)"
               borderRadius="100%"
+              border="3px solid #ffffff"
             >
               <img src={MetaMultiplayerLogo} alt="multi" width="30px" />
             </Row>
