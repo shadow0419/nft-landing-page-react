@@ -4,9 +4,7 @@ import { Text } from "../../common/Text";
 import { Col, Row } from "../../common/Layout";
 import faqImg from "../../../assets/car-slider.png";
 import logoImg from "../../../assets/MetaMultiplayerLogo.png";
-import gtavImg from "../../../assets/gtav_img.png";
-import link from "../../../assets/link.png";
-import juli from "../../../assets/juli.png";
+import gtavImg from "../../../assets/Footer.svg";
 import { Collapse } from "../../../component/common/Collapse";
 import { FaTwitter, FaYoutube, FaTelegramPlane } from "react-icons/fa";
 //////////////////////////////////////////////
@@ -53,11 +51,12 @@ const data = [
 ];
 const StyledFooter = styled.div`
   background: ${`url(${gtavImg})`};
+  background-size: cover;
   margin: 100px 0 0 0;
   width: 100%;
 `;
 const FooterContainer = styled.div`
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -200,7 +199,7 @@ const Faq = () => {
       <StyledFooter>
         <FooterContainer>
           <FooterBody>
-            <Row position="absolute" top="-10px" width="100%">
+            {/* <Row position="absolute" top="-10px" width="100%">
               <img
                 src={juli}
                 style={{
@@ -208,10 +207,10 @@ const Faq = () => {
                 }}
                 alt="juli"
               />
-            </Row>
+            </Row> */}
             <Col width="auto">
               <Text>Link</Text>
-              <img src={link} alt="link" width="200px" />
+              {/* <img src={link} alt="link" width="200px" /> */}
               <Row mgap="0 40px 0 0" margin="30px 0 0 0" align="flex-start">
                 <Col mgap="0 0 30px 0" width="auto">
                   <Text>F&Q</Text>
@@ -232,23 +231,26 @@ const Faq = () => {
               <img src={logoImg} width="120px" alt="logo" />
               <Row mgap="0 15px 0 0" margin="30px 0 0 0">
                 <Row
-                  backgroundColor="rgba(255, 255, 255, 0.3)"
+                  backgroundColor="rgba(0, 0, 0)"
                   borderRadius="15px"
                   padding="10px"
+                  cursor="pointer"
                 >
                   <FaTwitter size="25" color="white" />
                 </Row>
                 <Row
-                  backgroundColor="rgba(255, 255, 255, 0.3)"
+                  backgroundColor="rgba(0, 0, 0)"
                   borderRadius="15px"
                   padding="10px"
+                  cursor="pointer"
                 >
                   <FaTelegramPlane size="25" color="white" />
                 </Row>
                 <Row
-                  backgroundColor="rgba(255, 255, 255, 0.3)"
+                  backgroundColor="rgba(0, 0, 0)"
                   borderRadius="15px"
                   padding="10px"
+                  cursor="pointer"
                 >
                   <FaYoutube size="25" color="white" />
                 </Row>

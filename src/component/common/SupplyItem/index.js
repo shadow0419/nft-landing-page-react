@@ -1,7 +1,6 @@
 import React from "react";
 import { Col } from "../Layout";
 import styled from "styled-components";
-import { Text } from "../Text";
 const SupplyStyle = styled.div`
   align-items: center;
   border-radius: 45px;
@@ -27,7 +26,7 @@ export const Product = styled.div`
   ::before {
     position: absolute;
     top: 0;
-    left: -75%;
+    left: -100%;
     z-index: 2;
     display: block;
     content: "";
@@ -74,10 +73,10 @@ export const SupplyItem = (props) => {
         <Product>
           <img
             src={props.img}
-            style={{ height: props.height, width: "100%", opacity: 0 }}
+            style={{ height: props.height, width: "100%" }}
             alt="product"
           />
-          <Text
+          {/* <Text
             color="#9F3FFF"
             fontWeight="700"
             fontFamily="Permanent Marker"
@@ -88,7 +87,7 @@ export const SupplyItem = (props) => {
             rotate="rotate(45deg)"
           >
             Coming Soon
-          </Text>
+          </Text> */}
         </Product>
       </Col>
     </SupplyStyle>

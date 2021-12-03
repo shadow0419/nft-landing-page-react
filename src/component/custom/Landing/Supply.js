@@ -1,13 +1,13 @@
 import React from "react";
 import { Text } from "../../common/Text";
 import { SupplyItem } from "../../common/SupplyItem";
-import jagvar from "../../../assets/jagvar.png";
-import clothe from "../../../assets/clothe.png";
-import house from "../../../assets/house.png";
-import bogati from "../../../assets/bogati.png";
+import jagvar from "../../../assets/Car.jpg";
+import clothe from "../../../assets/Tshirt.jpg";
+import house from "../../../assets/House.jpg";
+import bogati from "../../../assets/Wap.jpg";
+import bmw from "../../../assets/Ship.jpg";
 import motor from "../../../assets/motor.png";
 import WCCFgtaV2 from "../../../assets/WCCFgtaV2.png";
-import bmw from "../../../assets/bmw.png";
 import { Col, Row } from "../../common/Layout";
 import buyeffect from "../../../assets/buyeffect.png";
 import motoreffect from "../../../assets/motor-effect.png";
@@ -160,33 +160,33 @@ const SupplyGrid = styled.div`
 `;
 const data = [
   {
-    title: "Jagvar",
-    type: "car",
-    height: "170px",
-    src: jagvar,
-  },
-  {
     title: "Clothe",
     type: "Style",
-    height: "230px",
+    height: "auto",
     src: clothe,
+  },
+  {
+    title: "Jagvar",
+    type: "car",
+    height: "auto",
+    src: jagvar,
   },
   {
     title: "House (2Bedrooms)",
     type: "House",
-    height: "280px",
+    height: "auto",
     src: house,
   },
   {
     title: "Bogati",
     type: "car",
-    height: "230px",
+    height: "auto",
     src: bogati,
   },
   {
     title: "Jagvar",
     type: "car",
-    height: "170px",
+    height: "auto",
     src: bmw,
   },
 ];
