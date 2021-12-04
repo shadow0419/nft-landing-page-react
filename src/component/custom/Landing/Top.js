@@ -126,62 +126,7 @@ const LinkItem = styled.a`
     }
   }
 `;
-const IntroButton = styled.button`
-  z-index: 1;
-  background: rgba(255, 255, 255, 0.4);
-  box-shadow: 0px 4px 97px rgba(255, 86, 246, 0.51);
-  backdrop-filter: blur(192px);
-  padding: 10px 30px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  border-radius: 13px;
 
-  animation: glowing 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  :hover {
-    box-shadow: 0px 4px 97px rgba(255, 86, 246, 0.81);
-  }
-  :before {
-    content: "";
-    background: linear-gradient(
-      45deg,
-      #ff00c8,
-      #ff0000,
-      #00ffd5,
-      #002bff,
-      #7a00ff,
-      #ff0000,
-      #ff7300,
-      #fffb00,
-      #48ff00
-    );
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 10px;
-  }
-
-  :active {
-    color: #000;
-  }
-
-  :active:after {
-    background: transparent;
-  }
-
-  :hover:before {
-    opacity: 1;
-  }
-`;
 const WhiteButton = styled.button`
   z-index: 1;
   padding: 10px 30px;
@@ -478,12 +423,11 @@ const Top = () => {
             earn MMP tokens while playing on our server. Join today!
           </Text>
           <Row mgap="0 20px 0 0">
-            <WhiteButton>
-              <Text>whitepaper</Text>
-            </WhiteButton>
-            <IntroButton>
-              <Text>Introduction</Text>
-            </IntroButton>
+            <a href="https://metamultiplayer.io/whitepaper.pdf">
+              <WhiteButton>
+                <Text>whitepaper</Text>
+              </WhiteButton>
+            </a>
           </Row>
           <Row mgap="0 20px 0 0" margin="100px 0 50px 0">
             <HeaderIcon>

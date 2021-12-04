@@ -19,6 +19,7 @@ export const Product = styled.div`
   height: ${(props) => (props.height ? props.height : "auto")};
   border-radius: 38px;
   max-width: 240px;
+  width: 100%;
   transition: all 0.5s ease-in;
   position: relative;
   overflow: hidden;

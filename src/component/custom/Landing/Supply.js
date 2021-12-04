@@ -14,8 +14,26 @@ import motoreffect from "../../../assets/motor-effect.png";
 import maneffect1 from "../../../assets/man-effect1.png";
 import maneffect2 from "../../../assets/man-effect2.png";
 import styled from "styled-components";
-
 import { CountItem } from "../../common/CountItem";
+//////////////////////////////////////////////
+import au21 from "../../../assets/invester/au21.png";
+import bbs from "../../../assets/invester/bbs.png";
+import bca from "../../../assets/invester/bca.png";
+import gen from "../../../assets/invester/gen.png";
+import magu from "../../../assets/invester/magu.png";
+import bluezilla from "../../../assets/invester/bluezilla.png";
+import dutch from "../../../assets/invester/dutch.png";
+import everse from "../../../assets/invester/everse.png";
+import ferum from "../../../assets/invester/ferum.png";
+import gem from "../../../assets/invester/gem.png";
+import oddiyana from "../../../assets/invester/oddiyana.png";
+import qig from "../../../assets/invester/qig.png";
+import r930 from "../../../assets/invester/r930.png";
+import shark from "../../../assets/invester/shark.png";
+import synaps from "../../../assets/invester/synaps.png";
+import vespertine from "../../../assets/invester/vespertine.png";
+import wealthunion from "../../../assets/invester/wealthunion.png";
+import x21 from "../../../assets/invester/x21.png";
 const colordata = [
   {
     percent: 5,
@@ -158,35 +176,42 @@ const SupplyGrid = styled.div`
     padding: 0 10px 0 10px;
   }
 `;
+const InvestImg = styled.img`
+  margin: 1.5rem;
+`;
+const InvestLink = styled.a`
+  display: contents;
+  cursor: pointer;
+`;
 const data = [
   {
     title: "Clothe",
     type: "Style",
-    height: "auto",
+    height: "250px",
     src: clothe,
   },
   {
     title: "Jagvar",
     type: "car",
-    height: "auto",
+    height: "250px",
     src: jagvar,
   },
   {
     title: "House (2Bedrooms)",
     type: "House",
-    height: "auto",
+    height: "250px",
     src: house,
   },
   {
     title: "Bogati",
     type: "car",
-    height: "auto",
+    height: "250px",
     src: bogati,
   },
   {
     title: "Jagvar",
     type: "car",
-    height: "auto",
+    height: "250px",
     src: bmw,
   },
 ];
@@ -261,6 +286,62 @@ const Supply = () => {
         >
           SUPPLY
         </Text>
+        <Row wrap="wrap" margin="10px 0 0 0" maxWidth="1200px">
+          <InvestLink href="https://bluezilla.vc">
+            <InvestImg src={bluezilla} width="150px" height="100px" />
+          </InvestLink>
+          <InvestLink href="https://genblock.capital/">
+            <InvestImg src={gen} width="300px" height="70px" />
+          </InvestLink>
+          <InvestLink href="https://magnusdigitalassets.com/">
+            <InvestImg src={magu} width="150px" height="100px" />
+          </InvestLink>
+          <InvestLink href="https://wealthunion.io">
+            <InvestImg src={wealthunion} width="300px" height="70px" />
+          </InvestLink>
+          <InvestLink href="https://synaps.io/">
+            <InvestImg src={synaps} width="150px" height="60px" />
+          </InvestLink>
+          <InvestLink href="https://au21.capital">
+            <InvestImg src={au21} width="100px" height="100px" />
+          </InvestLink>
+          <InvestLink href="https://oddiyana.ventures">
+            <InvestImg src={oddiyana} width="100px" height="100px" />
+          </InvestLink>
+          <InvestLink href="https://moonwhale.ventures">
+            <InvestImg src={shark} width="150px" height="100px" />
+          </InvestLink>
+          <InvestLink href="https://oiginvest.com">
+            <InvestImg src={qig} width="150px" height="100px" />
+          </InvestLink>
+          <InvestLink href="https://dutchcryptoinvestors.com">
+            <InvestImg src={dutch} width="150px" height="100px" />
+          </InvestLink>
+          <InvestLink href="https://www.vespertine.capital">
+            <InvestImg src={vespertine} width="100px" height="100px" />
+          </InvestLink>
+          <InvestLink href="https://www.bbscapital.com">
+            <InvestImg src={bbs} width="250px" height="100px" />
+          </InvestLink>
+          <InvestLink href="https://bcainvestments.com">
+            <InvestImg src={bca} width="218px" height="100px" />
+          </InvestLink>
+          <InvestLink href="https://eversecapital.com/">
+            <InvestImg src={everse} width="175px" height="100px" />
+          </InvestLink>
+          <InvestLink href="https://gemcapital.io/">
+            <InvestImg src={gem} width="230px" height="100px" />
+          </InvestLink>
+          <InvestLink href="https://r-930capital.com/">
+            <InvestImg src={r930} width="300px" height="100px" />
+          </InvestLink>
+          <InvestLink href="https://x21digital.com/">
+            <InvestImg src={x21} width="100px" height="100px" />
+          </InvestLink>
+          <InvestLink href="https://x21digital.com/">
+            <InvestImg src={ferum} width="300px" height="55px" />
+          </InvestLink>
+        </Row>
         <div
           style={{ width: "100%", display: "flex", justifyContent: "center" }}
         >

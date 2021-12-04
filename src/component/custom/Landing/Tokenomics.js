@@ -6,7 +6,6 @@ import receipt from "../../../assets/receipt.png";
 import buyback from "../../../assets/buyback.png";
 import cardPos from "../../../assets/card-pos.png";
 import token from "../../../assets/nft.jpg";
-import logo from "../../../assets/MetaMultiplayerLogo.png";
 import { Col } from "../../common/Layout";
 import { Text } from "../../common/Text";
 const StyledView = styled.div`
@@ -17,9 +16,6 @@ const StyledView = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  @media only screen and (max-width: 550px) {
-    background-size: cover;
-  }
 `;
 const TokenomicsDiv = styled.div`
   position: relative;
@@ -31,6 +27,9 @@ const TokenomicsDiv = styled.div`
   width: 100%;
   margin: auto;
   z-index: 2;
+  @media only screen and (max-width: 900px) {
+    background-size: cover;
+  }
 `;
 
 const TokenomicsText = styled.div`
@@ -158,16 +157,6 @@ const Tokenomics = () => {
             position: "relative",
           }}
         >
-          <img
-            src={logo}
-            style={{
-              position: "absolute",
-              top: "80px",
-              right: "100px",
-              width: "120px",
-            }}
-            alt="logo"
-          />
           {/* <TokenomicsImg src={token} /> */}
           <TokenomicsText>Tokenomics</TokenomicsText>
           {/* <WhiteCar src={car1} /> */}
