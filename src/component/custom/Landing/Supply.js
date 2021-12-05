@@ -218,7 +218,7 @@ const Supply = () => {
           align="center"
           margin="30px 0 0 0"
         >
-          SUPPLY
+          Our Partners
         </Text>
         <Row wrap="wrap" margin="10px 0 0 0" maxWidth="1200px">
           <InvestLink href="https://bluezilla.vc">
@@ -276,6 +276,15 @@ const Supply = () => {
             <InvestImg src={ferum} width="300px" height="55px" />
           </InvestLink>
         </Row>
+        <Text
+          fontFamily="Orbitron"
+          fontWeight="700"
+          fontSize="40px"
+          align="center"
+          margin="30px 0 0 0"
+        >
+          SUPPLY
+        </Text>
         <div
           style={{ width: "100%", display: "flex", justifyContent: "center" }}
         >

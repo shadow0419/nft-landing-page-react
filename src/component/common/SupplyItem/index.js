@@ -65,30 +65,13 @@ export const Product = styled.div`
 export const SupplyItem = (props) => {
   return (
     <SupplyStyle>
-      <Col
-        backgroundColor="#ffffff"
-        borderRadius="38px"
-        padding="4px"
-        align="center"
-      >
+      <Col backgroundColor="#ffffff" borderRadius="38px" align="center">
         <Product>
           <img
             src={props.img}
             style={{ height: props.height, width: "100%" }}
             alt="product"
           />
-          {/* <Text
-            color="#9F3FFF"
-            fontWeight="700"
-            fontFamily="Permanent Marker"
-            position="absolute"
-            fontSize="29px"
-            top="40%"
-            left="10%"
-            rotate="rotate(45deg)"
-          >
-            Coming Soon
-          </Text> */}
         </Product>
       </Col>
     </SupplyStyle>
