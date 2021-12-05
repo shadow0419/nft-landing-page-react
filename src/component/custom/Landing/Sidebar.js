@@ -2,65 +2,16 @@ import React, { useState, useEffect, useRef } from "react";
 // @import component
 import { Text } from "../../common/Text";
 import { Button } from "../../common/Button";
+import { Navbardata } from "../../../constant";
 // @import style
+import {
+  LinkItem,
+  StyledSidebar,
+  LogoIMG,
+  MenuLogo,
+} from "../../../style/sidebar";
 import { theme } from "../../../theme";
-import styled from "styled-components";
 import logo from "../../../assets/MetaMultiplayerLogo.png";
-const LinkItem = styled.a`
-  position: relative;
-  cursor: pointer;
-  text-decoration: none;
-  span {
-    transition: all 0.4s ease-in-out;
-    opacity: 0.5;
-    ::after {
-      margin-top: 5px;
-      transition: all 0.4s ease-in-out;
-      opacity: 0.5;
-      content: "";
-      display: block;
-      height: 2px;
-      width: 100%;
-      background: #fff;
-      transform: scaleX(0);
-    }
-  }
-  ${(props) =>
-    props.sel
-      ? `  span {
-    opacity: 1;
-    ::after {
-      opacity: 1;
-      transform: scaleX(1);
-    }
-  }`
-      : ""}
-  :hover {
-    span {
-      opacity: 1;
-      ::after {
-        opacity: 1;
-        transform: scaleX(1);
-      }
-    }
-  }
-`;
-const StyledSidebar = styled.div`
-  width: 260px;
-  ${() =>
-    localStorage.getItem("rightmenu") === "on"
-      ? "left: 0px;transition: 0.7s ease;"
-      : "left: -290px;transition: 0.7s ease;"}
-  background: ${theme.primarySidebar};
-  position: fixed;
-  height: 100%;
-  z-index: 100000;
-  padding: 15px;
-  box-shadow: 2px 0 5px 0 rgb(0 0 0 / 20%);
-  & > *:not(:last-child) {
-    margin-bottom: 20px;
-  }
-`;
 
 const RenderItem = ({ selected, name, onSelected }) => {
   return (
@@ -81,27 +32,7 @@ const RenderItem = ({ selected, name, onSelected }) => {
     </LinkItem>
   );
 };
-const LogoIMG = styled.img`
-  margin-right: 0.7rem !important;
-  border-style: none;
-  height: 45px;
-`;
-const MenuLogo = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-`;
-const Navbardata = [
-  "Home",
-  "Presale",
-  "Tokenomics",
-  "Roadmap",
-  "NFT",
-  "Supply",
-  "Make money",
-  "FAQ",
-];
+
 const Sidebar = () => {
   const MenuRef = useRef(null);
   const [selected, setSelected] = useState("home");

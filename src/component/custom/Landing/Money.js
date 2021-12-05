@@ -1,5 +1,7 @@
 import React from "react";
 import { Text } from "../../common/Text";
+import { Col, Row } from "../../common/Layout";
+import { CoinImg, DescItem, FrontImg } from "../../../style/money";
 import moneyback from "../../../assets/moneyback.png";
 import Vector from "../../../assets/Vector.png";
 import passove from "../../../assets/passove.png";
@@ -8,42 +10,7 @@ import yellow from "../../../assets/man-effect2.png";
 import coin from "../../../assets/coin.png";
 import Frame from "../../../assets/Frame.png";
 import supplyWave from "../../../assets/supply-wave.png";
-import { Col, Row } from "../../common/Layout";
-import styled from "styled-components";
 
-const CoinImg = styled.img`
-  width: 450px;
-  position: "absolute";
-  right: "5%";
-  top: "5%";
-  z-index: 2;
-  @media only screen and (max-width: 900px) {
-    display: none;
-  }
-`;
-const DescItem = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin: 10px auto 20px 3%;
-  :hover {
-    img {
-      margin-top: 35px;
-    }
-  }
-  @media only screen and (max-width: 900px) {
-    :hover {
-      img {
-        margin-bottom: 50px;
-      }
-    }
-  }
-`;
-const FrontImg = styled.img`
-  transition: 0.5s;
-  margin-top: 10px;
-`;
 const Money = () => {
   return (
     <Col
