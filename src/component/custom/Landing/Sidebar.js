@@ -12,24 +12,32 @@ import {
 } from "../../../style/sidebar";
 import { theme } from "../../../theme";
 import logo from "../../../assets/MetaMultiplayerLogo.png";
+import { Col } from "../../common/Layout";
 
 const RenderItem = ({ selected, name, onSelected }) => {
   return (
-    <LinkItem
-      sel={
-        selected.toString().toLowerCase() === name.toString().toLowerCase()
-          ? true
-          : false
-      }
-      href={`#${name.toString().toLowerCase()}`}
-      onClick={() => {
-        onSelected(`${name.toString().toLowerCase()}`);
-      }}
-    >
-      <Text color={theme.primaryLight} fontWeight="400">
-        {name}
-      </Text>
-    </LinkItem>
+    <Col align="center">
+      <LinkItem
+        sel={
+          selected.toString().toLowerCase() === name.toString().toLowerCase()
+            ? true
+            : false
+        }
+        href={`#${name.toString().toLowerCase()}`}
+        onClick={() => {
+          onSelected(`${name.toString().toLowerCase()}`);
+        }}
+      >
+        <Text
+          color={theme.primaryLight}
+          fontWeight="400"
+          fontSize="25px"
+          align="center"
+        >
+          {name}
+        </Text>
+      </LinkItem>
+    </Col>
   );
 };
 
@@ -86,10 +94,11 @@ const Sidebar = () => {
             />
           );
         })}
-
-        <Button>
-          <Text>Connect MetaMask</Text>
-        </Button>
+        <Col align="center">
+          <Button>
+            <Text>Connect MetaMask</Text>
+          </Button>
+        </Col>
       </StyledSidebar>
     )
   );

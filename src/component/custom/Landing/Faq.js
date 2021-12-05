@@ -60,29 +60,38 @@ const Faq = () => {
           <FooterBody>
             <Col width="auto">
               <Text cursor="pointer">Link</Text>
-              <Row mgap="0 40px 0 0" margin="30px 0 0 0" align="flex-start">
-                <Col mgap="0 0 30px 0" width="auto">
-                  <SocialLink href="#faq">
-                    <Text cursor="pointer">F&Q</Text>
-                  </SocialLink>
-                  <SocialLink href="#presale">
-                    <Text cursor="pointer">PreSale</Text>
-                  </SocialLink>
-                  <SocialLink href="#supply">
-                    <Text cursor="pointer">Supply</Text>
-                  </SocialLink>
-                </Col>
-                <Col mgap="0 0 30px 0" width="auto">
-                  <SocialLink href="#make money">
-                    <Text cursor="pointer">Make Money</Text>
-                  </SocialLink>
-                  <SocialLink href="#nft">
-                    <Text cursor="pointer">Nft</Text>
-                  </SocialLink>
-                  <SocialLink href="#roadmap">
-                    <Text cursor="pointer">Roadmap</Text>
-                  </SocialLink>
-                </Col>
+              <Row
+                mgap="0 40px 30px 0"
+                margin="30px 0 0 0"
+                align="flex-start"
+                className="footer_link"
+                justify="flex-start"
+                wrap="wrap"
+              >
+                <Row mgap="0 40px 0 0">
+                  <Col mgap="0 0 30px 0" width="auto">
+                    <SocialLink href="#faq">
+                      <Text cursor="pointer">F&Q</Text>
+                    </SocialLink>
+                    <SocialLink href="#presale">
+                      <Text cursor="pointer">PreSale</Text>
+                    </SocialLink>
+                    <SocialLink href="#supply">
+                      <Text cursor="pointer">Supply</Text>
+                    </SocialLink>
+                  </Col>
+                  <Col mgap="0 0 30px 0" width="auto">
+                    <SocialLink href="#make money">
+                      <Text cursor="pointer">Make Money</Text>
+                    </SocialLink>
+                    <SocialLink href="#nft">
+                      <Text cursor="pointer">Nft</Text>
+                    </SocialLink>
+                    <SocialLink href="#roadmap">
+                      <Text cursor="pointer">Roadmap</Text>
+                    </SocialLink>
+                  </Col>
+                </Row>
                 <Col mgap="0 0 30px 0" width="auto">
                   <SocialLink href="#tokenomics">
                     <Text cursor="pointer">Tokenomics</Text>

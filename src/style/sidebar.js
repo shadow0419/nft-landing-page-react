@@ -20,16 +20,7 @@ export const LinkItem = styled.a`
       transform: scaleX(0);
     }
   }
-  ${(props) =>
-    props.sel
-      ? `  span {
-    opacity: 1;
-    ::after {
-      opacity: 1;
-      transform: scaleX(1);
-    }
-  }`
-      : ""}
+
   :hover {
     span {
       opacity: 1;

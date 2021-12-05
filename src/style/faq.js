@@ -22,7 +22,7 @@ export const FooterBody = styled.div`
   flex-direction: row;
   @media only screen and (max-width: 500px) {
     flex-direction: column;
-
+    padding: 40px;
     align-items: center;
     & > *:not(:last-child) {
       margin-bottom: 30px;

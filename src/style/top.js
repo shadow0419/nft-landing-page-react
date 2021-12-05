@@ -93,16 +93,7 @@ export const LinkItem = styled.a`
       transform: scaleX(0);
     }
   }
-  ${(props) =>
-    props.sel
-      ? `  span {
-    opacity: 1;
-    ::after {
-      opacity: 1;
-      transform: scaleX(1);
-    }
-  }`
-      : ""}
+
   :hover {
     span {
       opacity: 1;
@@ -202,9 +193,15 @@ export const HeaderText = styled.span`
   }
 `;
 export const GtaImg = styled.img`
-  width: 600px;
+  width: 500px;
   @media only screen and (max-width: 1100px) {
     display: none;
+  }
+  @media only screen and (max-width: 800px) {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
   }
 `;
 
@@ -216,6 +213,13 @@ export const PageStyle = styled.div`
   z-index: 10;
   @media only screen and (max-width: 400px) {
     padding: 0 10px;
+  }
+  @media only screen and (max-width: 500px) {
+    .header_sub {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
   }
 `;
 export const SnowView = styled.div`

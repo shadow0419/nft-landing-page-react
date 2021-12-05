@@ -142,19 +142,24 @@ const Top = () => {
           }}
         >
           <HeaderText>
-            Metamultiplayer - First <br />
-            Real Metaverse Experience!
+            Metamultiplayer - First Real Metaverse Experience!
           </HeaderText>
           <Text
             margin="40px 0 50px 0"
             lineHeight="39px"
             color="rgba(255, 255, 255, 0.6)"
             width="90%"
+            className="header_sub"
           >
-            Play on our GTA 5 roleplay server, Collect & Trade NFT'S, <br />
-            earn MMP tokens while playing on our server. Join today!
+            Play on our GTA 5 roleplay server, Collect & Trade NFT'S, earn MMP
+            tokens while playing on our server. Join today!
           </Text>
-          <Row mgap="0 20px 0 0" width="100%" justify="flex-start">
+          <Row
+            mgap="0 20px 0 0"
+            width="100%"
+            justify="flex-start"
+            className="header_sub"
+          >
             <a href="https://metamultiplayer.io/whitepaper.pdf">
               <WhiteButton>
                 <Text>whitepaper</Text>
@@ -166,6 +171,7 @@ const Top = () => {
             margin="100px 0 50px 0"
             width="100%"
             justify="flex-start"
+            className="header_sub"
           >
             <HeaderIcon>
               <img src={weichle} alt="weichle" width="50px" />
