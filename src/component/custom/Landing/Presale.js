@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 // @import component
 import { Text } from "../../common/Text";
@@ -8,7 +8,7 @@ import metamaskImg from "../../../assets/metamask.png";
 import bnbImg from "../../../assets/binance-coin-logo.png";
 import MetaMultiplayerLogo from "../../../assets/MetaMultiplayerLogo.png";
 import buyeffect from "../../../assets/buyeffect.png";
-import getWeb3 from "../../../getWeb3";
+// import getWeb3 from "../../../getWeb3";
 import { Row, Col } from "../../common/Layout";
 import { BuyInput, StyledInput, ConnectButton } from "../../../style/presale";
 const BuyButton = styled.button`
@@ -27,15 +27,15 @@ const BuyButton = styled.button`
   position: relative;
 `;
 const Presale = () => {
-  const [userAccount, setUserAccount] = useState();
-  useEffect(() => {
-    ConnectWallet();
-  }, []);
-  const ConnectWallet = async () => {
-    const web3 = await getWeb3();
-    const accounts = await web3.eth.getAccounts();
-    setUserAccount(accounts[0]);
-  };
+  // const [userAccount, setUserAccount] = useState();
+  // useEffect(() => {
+  //   ConnectWallet();
+  // }, []);
+  // const ConnectWallet = async () => {
+  //   const web3 = await getWeb3();
+  //   const accounts = await web3.eth.getAccounts();
+  //   setUserAccount(accounts[0]);
+  // };
 
   return (
     <Col
@@ -62,11 +62,7 @@ const Presale = () => {
         Make sure to use Metamask/Trust Wallet to interact with this form. Min
         Contribution: 0.1 BNB Max Contribution : 5 BNB
       </Text> */}
-      <ConnectButton
-        onClick={() => {
-          ConnectWallet();
-        }}
-      >
+      <ConnectButton disabled={true}>
         <Row
           width="55px"
           height="55px"
@@ -76,12 +72,13 @@ const Presale = () => {
           <img src={metamaskImg} alt="metamask" />
         </Row>
         <Text fontSize="20px" align="center" margin="0 0 0 10px" flex="none">
-          {userAccount
+          {/* {userAccount
             ? `${userAccount.slice(0, 6)}...${userAccount.slice(
                 userAccount.length - 4,
                 userAccount.length
               )}`
-            : "Conecct to meta mask"}
+            : "Conecct to meta mask"} */}
+          Connect to metamask
         </Text>
       </ConnectButton>
       <Col

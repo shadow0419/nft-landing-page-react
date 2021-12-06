@@ -37,14 +37,14 @@ export const ConnectButton = styled.button`
   display: flex;
   width: 100%;
   outline: none;
-  cursor: pointer;
+  cursor: not-allowed;
   border: none;
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   animation: glowing 20s linear infinite;
   transition: opacity 0.3s ease-in-out;
   z-index: 5;
-  :hover {
+  /* :hover {
     box-shadow: 0px 4px 97px rgba(255, 153, 0, 0.81);
   }
   :before {
@@ -77,5 +77,5 @@ export const ConnectButton = styled.button`
 
   :hover:before {
     opacity: 1;
-  }
+  } */
 `;

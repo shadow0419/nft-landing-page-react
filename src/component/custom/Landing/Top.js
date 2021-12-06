@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import getWeb3 from "../../../getWeb3";
+// import getWeb3 from "../../../getWeb3";
 import { Text } from "../../common/Text";
 import logo from "../../../assets/MetaMultiplayerLogo.png";
 import gtaCha from "../../../assets/gta-cha.png";
@@ -55,19 +55,13 @@ const RenderItem = ({ selected, name, onSelected }) => {
 const Top = () => {
   const [selected, setSelected] = useState("home");
   const [menushow, setMenushow] = useState(false);
-  const [userAccount, setUserAccount] = useState();
+  // const [userAccount, setUserAccount] = useState();
   const menustate = localStorage.getItem("rightmenu");
-  useEffect(() => {
-    ConnectWallet();
-  }, []);
+
   useEffect(() => {
     setMenushow(localStorage.getItem("rightmenu") === "on" ? true : false);
   }, [menustate]);
-  const ConnectWallet = async () => {
-    const web3 = await getWeb3();
-    const accounts = await web3.eth.getAccounts();
-    setUserAccount(accounts[0]);
-  };
+
   const MenuShow = () => {
     if (menushow) {
       localStorage.setItem("rightmenu", "off");
@@ -108,18 +102,15 @@ const Top = () => {
               );
             })}
 
-            <Button
-              onClick={() => {
-                ConnectWallet();
-              }}
-            >
+            <Button>
               <Text>
-                {userAccount
+                {/* {userAccount
                   ? `${userAccount.slice(0, 6)}...${userAccount.slice(
                       userAccount.length - 4,
                       userAccount.length
                     )}`
-                  : "Conecct wallet"}
+                  : "Conecct wallet"} */}
+                Connect wallet
               </Text>
             </Button>
           </LinkLayout>
@@ -160,7 +151,11 @@ const Top = () => {
             justify="flex-start"
             className="header_sub"
           >
-            <a href="https://metamultiplayer.io/whitepaper.pdf">
+            <a
+              href="https://metamultiplayer.io/whitepaper.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
               <WhiteButton>
                 <Text>whitepaper</Text>
               </WhiteButton>

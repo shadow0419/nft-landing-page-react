@@ -221,58 +221,58 @@ const Supply = () => {
           Our Partners
         </Text>
         <Row wrap="wrap" margin="10px 0 0 0" maxWidth="1200px">
-          <InvestLink href="https://bluezilla.vc">
+          <InvestLink href="https://bluezilla.vc" target="_blank">
             <InvestImg src={bluezilla} width="150px" height="100px" />
           </InvestLink>
-          <InvestLink href="https://genblock.capital/">
+          <InvestLink href="https://genblock.capital/" target="_blank">
             <InvestImg src={gen} width="300px" height="70px" />
           </InvestLink>
-          <InvestLink href="https://magnusdigitalassets.com/">
+          <InvestLink href="https://magnusdigitalassets.com/" target="_blank">
             <InvestImg src={magu} width="150px" height="100px" />
           </InvestLink>
-          <InvestLink href="https://wealthunion.io">
+          <InvestLink href="https://wealthunion.io" target="_blank">
             <InvestImg src={wealthunion} width="300px" height="70px" />
           </InvestLink>
-          <InvestLink href="https://synaps.io/">
+          <InvestLink href="https://synaps.io/" target="_blank">
             <InvestImg src={synaps} width="150px" height="60px" />
           </InvestLink>
-          <InvestLink href="https://au21.capital">
+          <InvestLink href="https://au21.capital" target="_blank">
             <InvestImg src={au21} width="100px" height="100px" />
           </InvestLink>
-          <InvestLink href="https://oddiyana.ventures">
+          <InvestLink href="https://oddiyana.ventures" target="_blank">
             <InvestImg src={oddiyana} width="100px" height="100px" />
           </InvestLink>
-          <InvestLink href="https://moonwhale.ventures">
+          <InvestLink href="https://moonwhale.ventures" target="_blank">
             <InvestImg src={shark} width="150px" height="100px" />
           </InvestLink>
-          <InvestLink href="https://oiginvest.com">
+          <InvestLink href="https://oiginvest.com" target="_blank">
             <InvestImg src={qig} width="150px" height="100px" />
           </InvestLink>
-          <InvestLink href="https://dutchcryptoinvestors.com">
+          <InvestLink href="https://dutchcryptoinvestors.com" target="_blank">
             <InvestImg src={dutch} width="150px" height="100px" />
           </InvestLink>
-          <InvestLink href="https://www.vespertine.capital">
+          <InvestLink href="https://www.vespertine.capital" target="_blank">
             <InvestImg src={vespertine} width="100px" height="100px" />
           </InvestLink>
-          <InvestLink href="https://www.bbscapital.com">
+          <InvestLink href="https://www.bbscapital.com" target="_blank">
             <InvestImg src={bbs} width="250px" height="100px" />
           </InvestLink>
-          <InvestLink href="https://bcainvestments.com">
+          <InvestLink href="https://bcainvestments.com" target="_blank">
             <InvestImg src={bca} width="218px" height="100px" />
           </InvestLink>
-          <InvestLink href="https://eversecapital.com/">
+          <InvestLink href="https://eversecapital.com/" target="_blank">
             <InvestImg src={everse} width="175px" height="100px" />
           </InvestLink>
-          <InvestLink href="https://gemcapital.io/">
+          <InvestLink href="https://gemcapital.io/" target="_blank">
             <InvestImg src={gem} width="230px" height="100px" />
           </InvestLink>
-          <InvestLink href="https://r-930capital.com/">
+          <InvestLink href="https://r-930capital.com/" target="_blank">
             <InvestImg src={r930} width="300px" height="100px" />
           </InvestLink>
-          <InvestLink href="https://x21digital.com/">
+          <InvestLink href="https://x21digital.com/" target="_blank">
             <InvestImg src={x21} width="100px" height="100px" />
           </InvestLink>
-          <InvestLink href="https://x21digital.com/">
+          <InvestLink href="https://x21digital.com/" target="_blank">
             <InvestImg src={ferum} width="300px" height="55px" />
           </InvestLink>
         </Row>
