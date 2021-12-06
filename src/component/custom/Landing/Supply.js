@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from "../../common/Text";
 import { SupplyItem } from "../../common/SupplyItem";
 import jagvar from "../../../assets/Car.jpg";
-import clothe from "../../../assets/Tshirt.jpg";
+import clothe from "../../../assets/helicopter.jpg";
 import house from "../../../assets/House.jpg";
 import bogati from "../../../assets/Wap.jpg";
 import bmw from "../../../assets/Ship.jpg";
