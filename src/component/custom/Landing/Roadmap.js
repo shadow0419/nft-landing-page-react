@@ -42,17 +42,17 @@ const Roadmap = () => {
           <MapContainer>
             <RoadmapDiv1>
               <MapItem
-                date="2022 Q4"
+                date="2022 Q1"
                 title="Public Presale"
                 content="Anyone can participate"
               />
               <MapItem
-                date="2022 Q4"
+                date="2022 Q1"
                 title="NFT Marketplace"
                 content="Launch of our NFT marketplace with ETH Bridge."
               />
               <MapItem
-                date="2022 Q1"
+                date="2022 Q2"
                 title="Staking Platform Launch"
                 content="Stake any amount of MMP tokens on our staking platform, INSANE APY's incoming!"
               />
@@ -163,7 +163,7 @@ const Roadmap = () => {
 
             <RoadmapDiv2>
               <MapItem
-                date="2022 Q4"
+                date="2022 Q1"
                 title="Pancakeswap Launch"
                 content="Pancakeswap Launch - Along with Pancakeswap Listing, We will get listed on Coingecko & Coinmarketcap the same day."
               />
