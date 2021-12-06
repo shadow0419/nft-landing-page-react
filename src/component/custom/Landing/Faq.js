@@ -108,7 +108,10 @@ const Faq = () => {
                   padding="10px"
                   cursor="pointer"
                 >
-                  <SocialLink href="https://twitter.com/MetaMultiplayer">
+                  <SocialLink
+                    href="https://twitter.com/MetaMultiplayer"
+                    target="_blank"
+                  >
                     <FaTwitter size="25" color="white" />
                   </SocialLink>
                 </Row>
@@ -118,7 +121,10 @@ const Faq = () => {
                   padding="10px"
                   cursor="pointer"
                 >
-                  <SocialLink href="https://t.me/meta_multiplayer">
+                  <SocialLink
+                    href="https://t.me/meta_multiplayer"
+                    target="_blank"
+                  >
                     <FaTelegramPlane size="25" color="white" />
                   </SocialLink>
                 </Row>
