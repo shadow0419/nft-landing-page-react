@@ -1,5 +1,15 @@
 import styled from "styled-components";
+import { injectGlobal } from "styled-components";
 import { theme } from "../../../theme";
+import mediumFont from "../../../assets/fonts/font.ttf";
+injectGlobal`
+  @font-face {
+    font-family: 'Gilroy-Medium';
+    src: url(${mediumFont});
+    font-weight: normal;
+    font-style: normal;
+  }
+  `;
 export const Text = styled.span`
   flex: ${(props) => props.flex || "auto"};
   width: ${(props) => props.width || "auto"};

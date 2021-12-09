@@ -17,7 +17,7 @@
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "react-tooltip": "^4.2.21",
-    "styled-components": "^5.3.3",
+    "styled-components": "^3.4.10",
     "tsparticles": "^1.37.4",
     "web-vitals": "^1.0.1",
     "web3": "^1.6.0"
