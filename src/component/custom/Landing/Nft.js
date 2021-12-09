@@ -86,7 +86,7 @@ const Description = styled.span`
   width: 60%;
   line-height: 60px;
   z-index: 2;
-  font-family: "Gilroy-Medium";
+  font-family: "Gilroy-Medium" !important;
   color: white;
   @media only screen and (max-width: 1024px) {
     font-size: 20px;

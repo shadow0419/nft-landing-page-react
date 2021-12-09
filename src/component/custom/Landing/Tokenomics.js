@@ -89,29 +89,35 @@ const Tokenomics = () => {
                 <TokenItem>
                   <TokenItemImg src={mmp} />
                   <Col>
-                    <Text>MMP Rewards</Text>
-                    <Text>5% </Text>
+                    <Text fontFamily="Gilroy-Medium !important">
+                      MMP Rewards
+                    </Text>
+                    <Text fontFamily="Gilroy-Medium !important">5% </Text>
                   </Col>
                 </TokenItem>
                 <TokenItem>
                   <TokenItemImg src={receipt} />
                   <Col>
-                    <Text>Liquidity Tax</Text>
-                    <Text>2%</Text>
+                    <Text fontFamily="Gilroy-Medium !important">
+                      Liquidity Tax
+                    </Text>
+                    <Text fontFamily="Gilroy-Medium !important">2%</Text>
                   </Col>
                 </TokenItem>
                 <TokenItem>
                   <TokenItemImg src={buyback} />
                   <Col>
-                    <Text>BuybackTax</Text>
-                    <Text>3%</Text>
+                    <Text fontFamily="Gilroy-Medium !important">
+                      BuybackTax
+                    </Text>
+                    <Text fontFamily="Gilroy-Medium !important">3%</Text>
                   </Col>
                 </TokenItem>
                 <TokenItem>
                   <TokenItemImg src={cardPos} />
                   <Col>
-                    <Text>Sell Tax</Text>
-                    <Text>0%</Text>
+                    <Text fontFamily="Gilroy-Medium !important">Sell Tax</Text>
+                    <Text fontFamily="Gilroy-Medium !important">0%</Text>
                   </Col>
                 </TokenItem>
               </TokenItems>

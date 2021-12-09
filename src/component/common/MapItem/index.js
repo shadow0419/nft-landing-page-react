@@ -77,11 +77,16 @@ export const MapItem = (props) => {
   return (
     <ItemView direction={props.direction}>
       <Datetap>
-        <Text fontSize="20px">{props.date}</Text>
+        <Text fontFamily="Gilroy-Medium !important" fontSize="20px">
+          {props.date}
+        </Text>
       </Datetap>
       <StyledItem>
-        <Text fontSize="23px">{props.title}</Text>
+        <Text fontFamily="Gilroy-Medium !important" fontSize="23px">
+          {props.title}
+        </Text>
         <Text
+          fontFamily="Gilroy-Medium !important"
           fontSize="18px"
           lineHeight="34.5pxpx"
           margin="15px 0 0 0"

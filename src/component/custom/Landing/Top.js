@@ -46,7 +46,11 @@ const RenderItem = ({ selected, name, onSelected }) => {
         onSelected(`${name.toString().toLowerCase()}`);
       }}
     >
-      <Text color="#fffff" fontWeight="400">
+      <Text
+        color="#fffff"
+        fontWeight="400"
+        fontFamily="Gilroy-Medium !important"
+      >
         {name}
       </Text>
     </LinkItem>
@@ -141,6 +145,7 @@ const Top = () => {
             color="rgba(255, 255, 255, 0.6)"
             width="90%"
             className="header_sub"
+            fontFamily="Gilroy-Medium !important"
           >
             Play on our GTA 5 roleplay server, Collect & Trade NFT'S, earn MMP
             tokens while playing on our server. Join today!
@@ -157,7 +162,7 @@ const Top = () => {
               rel="noreferrer"
             >
               <WhiteButton>
-                <Text>whitepaper</Text>
+                <Text fontFamily="Gilroy-Medium !important">whitepaper</Text>
               </WhiteButton>
             </a>
           </Row>
